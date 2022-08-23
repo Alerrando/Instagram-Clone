@@ -1,0 +1,41 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.full {
+    height: 100%;
+    width: 100%;
+}
+
+.centralizer {
+    align-items: center;
+    display: flex;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+
+    .container-header {
+        @extend .centralizer, .full;
+        justify-content: space-between;
+        padding-left: 1rem;
+
+        .img-Instagram {
+            align-items: center;
+            display: flex;
+            height: 100%;
+            width: 100px;
+
+            img {@extend .full;}
+        }
+
+        nav{
+            @extend .centralizer;
+            gap: 1rem;
+            padding-right: 2.2rem;
+        }
+    }
+}
