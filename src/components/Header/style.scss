@@ -1,4 +1,11 @@
-body{
+@mixin width-height($height, $width) {
+    height: $height;
+    width: $width;
+}
+
+$widthSize: 1024px;
+
+body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -15,27 +22,86 @@ body{
 }
 
 header {
-    height: 80px;
-    width: 100%;
+    @include width-height(70px, 100%);
 
     .container-header {
         @extend .centralizer, .full;
         justify-content: space-between;
-        padding-left: 1rem;
 
         .img-Instagram {
+            @include width-height(100%, 100px);
             align-items: center;
             display: flex;
-            height: 100%;
-            width: 100px;
+            padding-left: 1rem;
 
-            img {@extend .full;}
+            img {
+                @extend .full;
+            }
         }
 
-        nav{
+        nav {
             @extend .centralizer;
+            display: grid;
+            grid-template-columns: repeat(3, 22px);
             gap: 1rem;
             padding-right: 2.2rem;
+        }
+
+        .desktop {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: $widthSize) {
+        .desktop {
+            display: block !important;
+        }
+
+        .container-header {
+            margin: 0 auto;
+            width: 72%;
+            
+            .img-Instagram {
+                @include width-height(100%, 120px);
+                img {
+                    @extend .full;
+                    object-fit: cover;
+                }
+
+                svg{
+                    display: none;
+                }
+            }
+
+            nav {
+                grid-template-columns: repeat(6, 28px);
+                gap: 1.5rem;
+
+                svg {
+                    @include width-height(30px, 30px);
+
+                    &:nth-child(1) > path{
+                        fill: black;
+                    }
+                }
+            }
+            #search-container{
+                align-items: center;
+                background-color: rgb(233, 233, 233);
+                border-radius: 10px;
+                display: flex !important;
+                gap: 0.5rem;
+                padding: 7px 26px 7px 18px;
+
+                input{
+                    background-color: rgb(233, 233, 233);
+                    border: none;
+                    font-size: 1rem;
+                    padding: 4px 5px;
+                    outline: none;
+                    width: 100%;
+                }
+            }
         }
     }
 }

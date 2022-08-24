@@ -1,4 +1,4 @@
-import { CaretDown, PlusCircle, Heart, PaperPlaneTilt } from 'phosphor-react'
+import { CaretDown, PlusCircle, Heart, PaperPlaneTilt, House, Compass, User, MagnifyingGlass } from 'phosphor-react'
 import './style.scss'
 
 export function Header(){
@@ -7,13 +7,21 @@ export function Header(){
             <div className="container-header">
                 <div className="img-Instagram">
                     <img src="https://www.svgrepo.com/show/353903/instagram.svg" alt="Instagram picture written" />
-                    <CaretDown size={16} weight="bold" />
+                    <CaretDown size={16} weight="bold"/>
+                </div>
+
+                <div className='search-container desktop' id="search-container">
+                    <MagnifyingGlass size={24} weight="bold" />
+                    <input type="text" name="search" id="search" placeholder='Search' />
                 </div>
 
                 <nav>
-                    <PlusCircle size={24} weight="bold" />
-                    <Heart size={24} weight="bold" />
+                    <House size={24} weight="bold" className="desktop" />
                     <PaperPlaneTilt size={24} weight="bold" />
+                    <PlusCircle size={24} weight="bold" />
+                    <Compass size={24} weight="bold" className="desktop" />
+                    <Heart size={24} weight="bold" />
+                    <User size={24} weight="bold" className="desktop" />
                 </nav>
             </div>
         </header>
