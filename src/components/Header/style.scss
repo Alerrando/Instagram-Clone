@@ -8,21 +8,18 @@
 $backgroundColorPrinc: rgb(233, 233, 233);;
 $widthSize: 1024px;
 
-.full {
-    height: 100%;
-    width: 100%;
-}
-
 .centralizer {
     align-items: center;
     display: flex;
 }
 
 header {
-    @include width-height(70px, 100%);
+    @include width-height(4rem, 100%);
 
     .container-header {
-        @extend .centralizer, .full;
+        @extend .centralizer;
+        @include width-height(100%, 100%);
+        border-bottom: 1px solid $backgroundColorPrinc;
         justify-content: space-between;
 
         .img-Instagram {
@@ -31,9 +28,10 @@ header {
             cursor: pointer;
             display: flex;
             padding-left: 1rem;
-
+            
             img {
-                @extend .full;
+                @include width-height(100%, 100%);
+                object-fit: cover;
             }
         }
 
@@ -57,12 +55,12 @@ header {
 
         .container-header {
             margin: 0 auto;
-            width: 72%;
+            @include width-height(100%,72%);
             
             .img-Instagram {
                 @include width-height(100%, 120px);
                 img {
-                    @extend .full;
+                    @include width-height(100%, 100%);
                     object-fit: cover;
                 }
 
