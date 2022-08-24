@@ -1,15 +1,12 @@
+@import '../reset.scss';
+
 @mixin width-height($height, $width) {
     height: $height;
     width: $width;
 }
 
+$backgroundColorPrinc: rgb(233, 233, 233);;
 $widthSize: 1024px;
-
-body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 .full {
     height: 100%;
@@ -31,6 +28,7 @@ header {
         .img-Instagram {
             @include width-height(100%, 100px);
             align-items: center;
+            cursor: pointer;
             display: flex;
             padding-left: 1rem;
 
@@ -79,6 +77,7 @@ header {
 
                 svg {
                     @include width-height(30px, 30px);
+                    cursor: pointer;
 
                     &:nth-child(1) > path{
                         fill: black;
@@ -87,14 +86,14 @@ header {
             }
             #search-container{
                 align-items: center;
-                background-color: rgb(233, 233, 233);
+                background-color: $backgroundColorPrinc;
                 border-radius: 10px;
                 display: flex !important;
                 gap: 0.5rem;
                 padding: 7px 26px 7px 18px;
 
                 input{
-                    background-color: rgb(233, 233, 233);
+                    background-color: $backgroundColorPrinc;
                     border: none;
                     font-size: 1rem;
                     padding: 4px 5px;
