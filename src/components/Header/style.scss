@@ -1,8 +1,5 @@
 @use '../reset.scss';
 
-$backgroundColorPrinc: rgb(233, 233, 233);;
-$widthSize: 1024px;
-
 .centralizer {
     align-items: center;
     display: flex;
@@ -10,11 +7,12 @@ $widthSize: 1024px;
 
 header {
     @include reset.width-height(4rem, 100%);
+    background-color: white;
 
     .container-header {
         @extend .centralizer;
         @include reset.width-height(100%, 100%);
-        border-bottom: 1px solid $backgroundColorPrinc;
+        border-bottom: 1px solid reset.$backgroundColorPrinc;
         justify-content: space-between;
 
         .img-Instagram {
@@ -43,7 +41,7 @@ header {
         }
     }
 
-    @media screen and (min-width: $widthSize) {
+    @media screen and (min-width: reset.$widthSize) {
         .desktop {
             display: block !important;
         }
@@ -79,14 +77,14 @@ header {
             }
             #search-container{
                 align-items: center;
-                background-color: $backgroundColorPrinc;
+                background-color: reset.$backgroundColorPrinc;
                 border-radius: 10px;
                 display: flex !important;
                 gap: 0.5rem;
                 padding: 7px 26px 7px 18px;
 
                 input{
-                    background-color: $backgroundColorPrinc;
+                    background-color: reset.$backgroundColorPrinc;
                     border: none;
                     font-size: 1rem;
                     padding: 4px 5px;

@@ -14,8 +14,19 @@ const storysInfos = [
 
     { 
         url: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-        name: "Sara Whild",
+        name: "casimiro",
     },
+
+    {
+        url: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+        name: "dev_steph",
+    },
+
+    {
+        url: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+        name: "onebitcode",
+    },
+
     {
         url: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
         name: "Sara Whild",
@@ -25,6 +36,7 @@ const storysInfos = [
         url: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
         name: "Sara Whild",
     },
+
     
 ]
 
@@ -40,7 +52,7 @@ export function CarrosselStors(){
                         <img src={storysInfos[index].url} alt="" />
                     </div>
 
-                    <p className="name-story">{storysInfos[index].name}</p>
+                    <p translate="no" className="name-story">{storysInfos[index].name}</p>
                 </div>
             ))}
         </div>

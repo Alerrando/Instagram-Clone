@@ -1,43 +1,59 @@
-@use '../../reset.scss';
+@use "../../reset.scss";
 
-.storys-container{
-    align-items: center;
-    display: flex;
-    gap: 20px;
-    padding: 18px 12px;
-
-    .storys{
-        display: block;
-        cursor: pointer;
-
-        .storys-img{
-            @include reset.width-height(70px, 70px);
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            
-            .story-open{
-                @include reset.width-height(75px, 75px);
-                background: linear-gradient(#fff, #fff) padding-box,
-                linear-gradient(45deg, slateblue, coral) border-box;
-                border: 3px solid transparent;
-                border-radius: 50px;
-                position: absolute;
-                z-index: -1;
+.storys-feed{
+    overflow-x: auto;
+    .storys-container {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+        padding: 18px 12px;
+    
+        .storys {
+            display: block;
+            cursor: pointer;
+    
+            .storys-img {
+                @include reset.width-height(70px, 70px);
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                position: relative;
+    
+                .story-open {
+                    @include reset.width-height(75px, 75px);
+                    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(45deg, slateblue, coral) border-box;
+                    border: 3px solid transparent;
+                    border-radius: 50px;
+                    position: absolute;
+                    z-index: 1;
+                }
+    
+                img {
+                    @include reset.width-height(100%, 100%);
+                    border-radius: 100px;
+                    object-fit: cover;
+                    z-index: 2;
+                }
             }
-
-            img{
-                @include reset.width-height(100%, 100%);
-                border-radius: 100px;
+    
+            .name-story {
+                align-items: center;
+                display: flex;
+                font-size: 13px;
+                justify-content: center;
             }
-
-        }
-
-        .name-story{
-            align-items: center;
-            display: flex;
-            font-size: 14px;
-            justify-content: center;
+    
+            @media screen and (min-width: reset.$widthSize){
+                .storys-img {
+                    @include reset.width-height(65px, 65px);
+    
+                    .story-open{
+                        @include reset.width-height(70px, 70px);
+                    }
+    
+                }
+            }
         }
     }
 }
+
