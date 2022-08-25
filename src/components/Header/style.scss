@@ -1,9 +1,4 @@
-@import '../reset.scss';
-
-@mixin width-height($height, $width) {
-    height: $height;
-    width: $width;
-}
+@use '../reset.scss';
 
 $backgroundColorPrinc: rgb(233, 233, 233);;
 $widthSize: 1024px;
@@ -14,23 +9,23 @@ $widthSize: 1024px;
 }
 
 header {
-    @include width-height(4rem, 100%);
+    @include reset.width-height(4rem, 100%);
 
     .container-header {
         @extend .centralizer;
-        @include width-height(100%, 100%);
+        @include reset.width-height(100%, 100%);
         border-bottom: 1px solid $backgroundColorPrinc;
         justify-content: space-between;
 
         .img-Instagram {
-            @include width-height(100%, 100px);
+            @include reset.width-height(100%, 100px);
             align-items: center;
             cursor: pointer;
             display: flex;
             padding-left: 1rem;
             
             img {
-                @include width-height(100%, 100%);
+                @include reset.width-height(100%, 100%);
                 object-fit: cover;
             }
         }
@@ -55,12 +50,12 @@ header {
 
         .container-header {
             margin: 0 auto;
-            @include width-height(100%,72%);
+            @include reset.width-height(100%,72%);
             
             .img-Instagram {
-                @include width-height(100%, 120px);
+                @include reset.width-height(100%, 120px);
                 img {
-                    @include width-height(100%, 100%);
+                    @include reset.width-height(100%, 100%);
                     object-fit: cover;
                 }
 
@@ -74,7 +69,7 @@ header {
                 gap: 1.5rem;
 
                 svg {
-                    @include width-height(30px, 30px);
+                    @include reset.width-height(30px, 30px);
                     cursor: pointer;
 
                     &:nth-child(1) > path{
