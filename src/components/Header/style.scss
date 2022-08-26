@@ -1,4 +1,4 @@
-@use '../reset.scss';
+@use "../reset.scss";
 
 .centralizer {
     align-items: center;
@@ -6,7 +6,7 @@
 }
 
 header {
-    @include reset.width-height(4rem, 100%);
+    @include reset.width-height(6rem, 100%);
     background-color: white;
 
     .container-header {
@@ -16,12 +16,12 @@ header {
         justify-content: space-between;
 
         .img-Instagram {
-            @include reset.width-height(100%, 100px);
+            @include reset.width-height(100%, 250px);
             align-items: center;
             cursor: pointer;
             display: flex;
-            padding-left: 1rem;
-            
+            padding-left: 2rem;
+
             img {
                 @include reset.width-height(100%, 100%);
                 object-fit: cover;
@@ -32,24 +32,36 @@ header {
             @extend .centralizer;
             display: grid;
             grid-template-columns: repeat(3, 22px);
-            gap: 1rem;
-            padding-right: 2.2rem;
+            gap: 2.5rem;
+            padding-right: 3.5rem;
+
+            svg {
+                @include reset.width-height(45px, 45px);
+                cursor: pointer;
+
+                &:nth-child(1) > path {
+                    fill: black;
+                }
+            }
         }
 
         .desktop {
             display: none;
         }
     }
+}
 
-    @media screen and (min-width: reset.$widthSize) {
-        .desktop {
-            display: block !important;
-        }
+@media screen and (min-width: reset.$widthSize) {
+    .desktop {
+        display: block !important;
+    }
 
+    header {
+        height: 4rem;
         .container-header {
             margin: 0 auto;
-            @include reset.width-height(100%,72%);
-            
+            @include reset.width-height(100%, 72%);
+
             .img-Instagram {
                 @include reset.width-height(100%, 120px);
                 img {
@@ -57,7 +69,7 @@ header {
                     object-fit: cover;
                 }
 
-                svg{
+                svg {
                     display: none;
                 }
             }
@@ -68,14 +80,9 @@ header {
 
                 svg {
                     @include reset.width-height(30px, 30px);
-                    cursor: pointer;
-
-                    &:nth-child(1) > path{
-                        fill: black;
-                    }
                 }
             }
-            #search-container{
+            #search-container {
                 align-items: center;
                 background-color: reset.$backgroundColorPrinc;
                 border-radius: 10px;
@@ -83,7 +90,7 @@ header {
                 gap: 0.5rem;
                 padding: 7px 26px 7px 18px;
 
-                input{
+                input {
                     background-color: reset.$backgroundColorPrinc;
                     border: none;
                     font-size: 1rem;
