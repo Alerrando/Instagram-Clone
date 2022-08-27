@@ -1,5 +1,10 @@
 @use "../reset.scss";
 
+@mixin grid-colum-row($colum, $row) {
+    grid-column: $colum;
+    grid-row: $row;
+}
+
 .centralizer {
     align-items: center;
     display: flex;
@@ -32,17 +37,30 @@ header {
             @extend .centralizer;
             display: grid;
             grid-template-columns: repeat(3, 22px);
-            gap: 2.5rem;
+            gap: 3rem;
             padding-right: 3.5rem;
 
             svg {
-                @include reset.width-height(45px, 45px);
+                @include reset.width-height(55px, 55px);
                 cursor: pointer;
 
                 &:nth-child(1) > path {
                     fill: black;
                 }
+
+                &:nth-child(2){
+                    @include grid-colum-row(3, 1);
+                }
+
+                &:nth-child(3){
+                    @include grid-colum-row(1, 1);
+                }
+
+                &:nth-child(5){
+                    @include grid-colum-row(2, 1);
+                }
             }
+
         }
 
         .desktop {
@@ -80,6 +98,22 @@ header {
 
                 svg {
                     @include reset.width-height(30px, 30px);
+
+                    &:nth-child(1){
+                        @include grid-colum-row(1, 1);
+                    }
+                    &:nth-child(2){
+                        @include grid-colum-row(2, 1);
+                    }
+                    &:nth-child(3){
+                        @include grid-colum-row(3, 1);
+                    }
+                    &:nth-child(5){
+                        @include grid-colum-row(5, 1);
+                    }
+                    &:nth-child(6){
+                        @include grid-colum-row(6, 1);
+                    }
                 }
             }
             #search-container {

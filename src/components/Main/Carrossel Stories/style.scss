@@ -1,29 +1,29 @@
 @use "../../reset.scss";
 
-.storys-feed{
+.stories-feed{
     overflow-x: auto;
-    .storys-container {
+    .stories-container {
         align-items: center;
         display: flex;
-        gap: 20px;
-        padding: 18px 12px;
+        gap: 50px;
+        padding: 25px 18px;
     
-        .storys {
+        .stories {
             display: block;
             cursor: pointer;
     
-            .storys-img {
-                @include reset.width-height(70px, 70px);
+            .stories-img {
+                @include reset.width-height(180px, 180px);
                 align-items: center;
                 display: flex;
                 justify-content: center;
                 position: relative;
     
-                .story-open {
-                    @include reset.width-height(75px, 75px);
+                .storie-open {
+                    @include reset.width-height(185px, 185px);
                     background: linear-gradient(#fff, #fff) padding-box, linear-gradient(45deg, slateblue, coral) border-box;
-                    border: 3px solid transparent;
-                    border-radius: 50px;
+                    border: 6px solid transparent;
+                    border-radius: 100px;
                     position: absolute;
                     z-index: 1;
                 }
@@ -36,24 +36,37 @@
                 }
             }
     
-            .name-story {
+            .name-storie {
                 align-items: center;
                 display: flex;
-                font-size: 13px;
+                font-size: 2rem;
                 justify-content: center;
             }
     
-            @media screen and (min-width: reset.$widthSize){
-                .storys-img {
+        }
+    }
+}
+
+@media screen and (min-width: reset.$widthSize){
+    .stories-feed{
+        .stories-container{
+            gap: 20px;
+            padding: 14px 20px;
+            
+            .stories{
+                .stories-img {
                     @include reset.width-height(65px, 65px);
-    
-                    .story-open{
+            
+                    .storie-open{
                         @include reset.width-height(70px, 70px);
+                        border: 3px solid transparent;
                     }
-    
+                }
+            
+                .name-storie{
+                    font-size: 0.9rem;
                 }
             }
         }
     }
 }
-

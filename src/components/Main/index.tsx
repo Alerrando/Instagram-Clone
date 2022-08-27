@@ -1,12 +1,12 @@
-import { CarrosselStors } from "./Carrossel Storys";
+import { CarrosselStories } from './Carrossel Stories'
 import './style.scss'
 
 export function Main(){
     return(
         <main>
             <div className="main-container">
-                <div className="storys-feed">
-                    <CarrosselStors />
+                <div className="stories-feed">
+                    <CarrosselStories />
                 </div>
 
                 <div className="infos">
