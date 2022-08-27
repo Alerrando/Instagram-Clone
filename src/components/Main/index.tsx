@@ -1,5 +1,5 @@
-import { User } from 'phosphor-react'
 import { CarrosselStories } from './Carrossel Stories'
+import { InfosMain } from './Infos Main'
 import './style.scss'
 
 export function Main(){
@@ -11,19 +11,7 @@ export function Main(){
                 </div>
 
                 <div className="container-infos">
-                    <header>
-                        <div className="user">
-                            <div className="outline"></div>
-                            <User weight="bold" />
-                        </div>
-
-                        <div className="header-info">
-                            <p>alerrandob</p>
-                            <p>Alerrando Breno</p>
-                        </div>
-
-                        <a href="#">Mudar</a>
-                    </header>
+                    <InfosMain />
                 </div>
             </div>
         </main>

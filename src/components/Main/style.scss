@@ -1,15 +1,5 @@
 @use '../reset.scss';
 
-.container-infos{
-    display: none;
-}
-
-@media screen and (max-width: 1000px) {
-    .container-infos{
-        display: none !important;
-    }
-}
-
 @media screen and (min-width: reset.$widthSize) {
     main{
         .main-container{
@@ -23,61 +13,6 @@
                 border: 2px solid reset.$backgroundColorPrinc;
                 border-radius: 10px;
                 max-width: 520px;
-            }
-
-            .container-infos{
-                display: block;
-                height: 120px;
-                margin: 1rem 2rem;
-                width: 20%;
-                
-                header{
-                    align-items: center;
-                    background-color: transparent;
-                    display: flex;
-                    justify-content: space-between;
-                    
-
-                    .user{
-                        @include reset.width-height(60px, 60px);
-                        align-items: center;
-                        display: flex;
-                        position: relative;
-
-                        .outline{
-                            @include reset.width-height(65px, 65px);
-                            background-color: #ccc;
-                            border: 1px solid black;
-                            border-radius: 100px;
-                            position: absolute;
-                            z-index: -1;
-                        }
-
-                        svg{
-                            @include reset.width-height(100%, 100%);
-                            border-radius: 100px;
-                            margin: 10px 0 0 8px;
-                            z-index: 1;
-                        }
-                    }
-
-                    .header-info{
-                        display: block;
-                        padding-right: 25px;
-
-                        p{
-                            margin: 0;
-
-                            &:nth-child(2){
-                                opacity: 0.70;
-                            }
-                        }
-                    }
-
-                    a{
-                        text-decoration: none;
-                    }
-                }
             }
         }
     }
