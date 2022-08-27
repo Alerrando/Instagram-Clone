@@ -12,11 +12,12 @@
 
 header {
     @include reset.width-height(6rem, 100%);
+    @extend .centralizer;
     background-color: white;
 
     .container-header {
         @extend .centralizer;
-        @include reset.width-height(100%, 100%);
+        @include reset.width-height(100%, calc(935px + 40px));
         border-bottom: 1px solid reset.$backgroundColorPrinc;
         justify-content: space-between;
 
@@ -25,7 +26,6 @@ header {
             align-items: center;
             cursor: pointer;
             display: flex;
-            padding-left: 2rem;
 
             img {
                 @include reset.width-height(100%, 100%);
@@ -70,18 +70,14 @@ header {
 }
 
 @media screen and (min-width: reset.$widthSize) {
-    .desktop {
-        display: block !important;
-    }
-
     header {
         height: 4rem;
+
         .container-header {
             margin: 0 auto;
-            @include reset.width-height(100%, 72%);
 
             .img-Instagram {
-                @include reset.width-height(100%, 120px);
+                @include reset.width-height(100%, 150px);
                 img {
                     @include reset.width-height(100%, 100%);
                     object-fit: cover;
@@ -132,6 +128,10 @@ header {
                     outline: none;
                     width: 100%;
                 }
+            }
+
+            .desktop {
+                display: block !important;
             }
         }
     }
