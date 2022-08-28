@@ -22,7 +22,7 @@ header {
         justify-content: space-between;
 
         .img-Instagram {
-            @include reset.width-height(100%, 250px);
+            @include reset.width-height(100%, 150px);
             align-items: center;
             cursor: pointer;
             display: flex;
@@ -37,11 +37,11 @@ header {
             @extend .centralizer;
             display: grid;
             grid-template-columns: repeat(3, 22px);
-            gap: 3rem;
-            padding-right: 3.5rem;
+            gap: 1.8rem;
+            padding-right: 2rem;
 
             svg {
-                @include reset.width-height(55px, 55px);
+                @include reset.width-height(30px, 30px);
                 cursor: pointer;
 
                 &:nth-child(1) > path {

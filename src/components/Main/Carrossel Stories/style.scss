@@ -5,7 +5,7 @@
     .stories-container {
         align-items: center;
         display: flex;
-        gap: 50px;
+        gap: 30px;
         padding: 25px 18px;
     
         .stories {
@@ -13,16 +13,15 @@
             cursor: pointer;
     
             .stories-img {
-                @include reset.width-height(180px, 180px);
                 align-items: center;
                 display: flex;
                 justify-content: center;
                 position: relative;
     
                 .storie-open {
-                    @include reset.width-height(185px, 185px);
+                    
                     background: linear-gradient(#fff, #fff) padding-box, linear-gradient(45deg, slateblue, coral) border-box;
-                    border: 6px solid transparent;
+                    border: 4px solid transparent;
                     border-radius: 100px;
                     position: absolute;
                     z-index: 1;
@@ -39,7 +38,7 @@
             .name-storie {
                 align-items: center;
                 display: flex;
-                font-size: 2rem;
+                font-size: 0.8rem;
                 justify-content: center;
             }
     
@@ -47,9 +46,25 @@
     }
 }
 
+@media screen and (max-width: 680px) {
+    .stories-feed{
+        .stories-container{
+            .stories{
+                .stories-img{
+                    @include reset.width-height(60px, 60px);
+            
+                    .storie-open{
+                        @include reset.width-height(65px, 65px);
+                    }
+                }
+            }
+        }
+    }
+}
 
 
-@media screen and (min-width: reset.$widthSize){
+
+@media screen and (min-width: 780px){
     .stories-feed{
         height: 10rem;
         .stories-container{
