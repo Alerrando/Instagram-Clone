@@ -3,7 +3,6 @@
 @media screen and (min-width: reset.$widthSize) {
     main{
         .main-container{
-            align-items: center;
             display: flex;
             justify-content: center;
             margin-top: 2rem;
@@ -13,6 +12,10 @@
                 border: 2px solid reset.$backgroundColorPrinc;
                 border-radius: 10px;
                 max-width: 520px;
+            }
+
+            .container-infos{
+                height: 80vh;
             }
         }
     }

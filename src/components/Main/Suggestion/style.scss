@@ -39,7 +39,7 @@
             }
     
             .suggestion-info {
-                margin-right: 65px;
+                margin-right: 120px;
                 p {
                     margin: 0;
     
@@ -53,6 +53,42 @@
                         font-size: 12px;
                         font-weight: 400;
                         white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+
+    footer{
+        margin-top: 30px;
+        nav{
+            max-width: 100%;
+            div{
+                display: flex;
+                list-style-type: none;
+                padding: 0;
+
+                .a9{
+                    &::after{
+                        content: "";
+                    }
+                }
+    
+                a{
+                    font-size: 14px;
+                    font-weight: 400;
+    
+                    span{
+                        color: rgb(199, 199, 199);
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+
+                    &:after{
+                        content: '\00B7';
+                        color: rgb(142, 142, 142);
+                        margin: 0 5px;
                     }
                 }
             }
