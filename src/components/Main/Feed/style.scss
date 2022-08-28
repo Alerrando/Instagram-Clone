@@ -1,17 +1,18 @@
 @use '../../reset.scss';
 
-.main-container-feed{
+.main-container-feed{    
     header{
         align-items: center;
         display: flex;
         height: auto;
         justify-content: space-between;
-        padding: 11px 9px;
+        padding: 11px 0;
 
         .header-info{
             align-items: center;
             display: flex;
             gap: 0.7rem;
+            padding-left: 9px;
 
             .feed-img{
                 @include reset.width-height(35px, 35px);
@@ -28,5 +29,38 @@
         }
     }
 
+    main{
+        .main-feed-img{
+            max-height: 282px;
+            width: 100%;
+            img{
+                @include reset.width-height(100%, 100%);
+            }
+        }
 
+        .main-feed-icons{
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+
+            .icons-interactions{
+                display: flex;
+                gap: 0.4rem;
+            }
+
+            svg{
+                @include reset.width-height(23px, 26px);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: reset.$sizeNotebook) {
+    .main-container-feed{
+        border-radius: 10px;
+        margin-top: 20px;
+        max-width: 520px;
+        overflow: hidden;
+    }
 }
