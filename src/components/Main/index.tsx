@@ -1,21 +1,25 @@
-import { CarrosselStories } from './Carrossel Stories'
-import { InfosMain } from './Infos Main'
-import './style.scss'
-import { Suggestion } from './Suggestion'
+import { CarrosselStories } from "./Carrossel Stories";
+import { Feed } from "./Feed";
+import { InfosMain } from "./Infos Main";
+import { Suggestion } from "./Suggestion";
+import "./style.scss";
 
-export function Main(){
-    return(
-        <main>
-            <div className="main-container">
-                <div className="stories-feed">
-                    <CarrosselStories />
-                </div>
+export function Main() {
+  return (
+    <main>
+      <div className="main-container">
+        <div>
+          <div className="stories-feed">
+            <CarrosselStories />
+          </div>
+          <Feed />
+        </div>
 
-                <div className="container-infos">
-                    <InfosMain />
-                    <Suggestion />
-                </div>
-            </div>
-        </main>
-    )
+        <div className="container-infos">
+          <InfosMain />
+          <Suggestion />
+        </div>
+      </div>
+    </main>
+  );
 }

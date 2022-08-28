@@ -1,0 +1,32 @@
+@use '../../reset.scss';
+
+.main-container-feed{
+    header{
+        align-items: center;
+        display: flex;
+        height: auto;
+        justify-content: space-between;
+        padding: 11px 9px;
+
+        .header-info{
+            align-items: center;
+            display: flex;
+            gap: 0.7rem;
+
+            .feed-img{
+                @include reset.width-height(35px, 35px);
+
+                img{
+                    @include reset.width-height(100%, 100%);
+                    border-radius: 100px;
+                    object-fit: cover;
+                }
+            }
+        }
+        svg{
+            margin-right: 18px;
+        }
+    }
+
+
+}

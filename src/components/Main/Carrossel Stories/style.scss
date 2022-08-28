@@ -48,6 +48,7 @@
 
 @media screen and (max-width: reset.$sizeMobile) {
     .stories-feed{
+        border-bottom: 1px solid reset.$backgroundColorPrinc;
         .stories-container{
             .stories{
                 .stories-img{

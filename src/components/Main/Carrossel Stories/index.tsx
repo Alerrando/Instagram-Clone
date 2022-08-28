@@ -1,7 +1,7 @@
 import { useState } from "react"
 import './style.scss'
 
-const storiesInfos = [
+export const storiesInfos = [
     {
         url: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
         name: "My Story",
@@ -46,7 +46,7 @@ export function CarrosselStories(){
     return(
         <div className="stories-container">
             {storiesInfos.map((storie, index) => (
-                <div className="stories">
+                <div className="stories" key={index}>
                     <div className="stories-img">
                         <div className="storie-open"></div>
                         <img src={storiesInfos[index].url} alt="" />

@@ -43,7 +43,7 @@ export function Suggestion() {
 
         <main>
           {suggestionPeople.map((person, index) => (
-            <div className="main-container-suggestion">
+            <div className="main-container-suggestion" key={index}>
               <div className="suggestion-img">
                 <img
                   src={suggestionPeople[index].url}
