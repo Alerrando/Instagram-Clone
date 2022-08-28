@@ -1,0 +1,57 @@
+@use "../../reset.scss";
+
+.main-info-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    a{text-decoration: none;}
+
+    .suggestion {
+        align-items: center;
+        display: flex;
+        font-weight: 700;
+        justify-content: space-between;
+
+        p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        a {
+            color: black;
+            font-size: 12px;
+        }
+    }
+
+    main {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        .suggestion-img {
+            @include reset.width-height(32px, 32px);
+
+            img {
+                @include reset.width-height(100%, 100%);
+                border-radius: 100px;
+                object-fit: cover;
+            }
+        }
+
+        .suggestion-info {
+            p {
+                margin: 0;
+
+                &:nth-child(1) {
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+
+                &:nth-child(2) {
+                    color: rgb(142, 142, 142);
+                    font-size: 12px;
+                    font-weight: 400;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}

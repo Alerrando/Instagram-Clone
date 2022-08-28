@@ -1,6 +1,7 @@
 import { CarrosselStories } from './Carrossel Stories'
 import { InfosMain } from './Infos Main'
 import './style.scss'
+import { Suggestion } from './Suggestion'
 
 export function Main(){
     return(
@@ -12,6 +13,7 @@ export function Main(){
 
                 <div className="container-infos">
                     <InfosMain />
+                    <Suggestion />
                 </div>
             </div>
         </main>
