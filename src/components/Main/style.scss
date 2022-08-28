@@ -1,6 +1,6 @@
 @use '../reset.scss';
 
-@media screen and (min-width: reset.$widthSize) {
+@media screen and (min-width: reset.$sizeNotebook) {
     main{
         .main-container{
             display: flex;

@@ -46,7 +46,7 @@
     }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: reset.$sizeMobile) {
     .stories-feed{
         .stories-container{
             .stories{
@@ -64,7 +64,7 @@
 
 
 
-@media screen and (min-width: 780px){
+@media screen and (min-width: reset.$sizeNotebook){
     .stories-feed{
         height: 10rem;
         .stories-container{

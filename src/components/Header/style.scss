@@ -69,7 +69,7 @@ header {
     }
 }
 
-@media screen and (min-width: reset.$widthSize) {
+@media screen and (min-width: reset.$sizeNotebook) {
     header {
         height: 4rem;
 
