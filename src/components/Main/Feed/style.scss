@@ -1,63 +1,63 @@
-@use '../../reset.scss';
+@use "../../reset.scss";
 
 $var: 0;
 @for $var from 3 through 1 {
-    .likes-imgs-#{$var}{
+    .infos-imgs-#{$var} {
         z-index: $var;
     }
 }
 
-.main-container-feed{
+.main-container-feed {
     background-color: white;
-    header{
+    header {
         align-items: center;
         display: flex;
         height: auto;
         justify-content: space-between;
         padding: 11px 0;
 
-        .header-info{
+        .header-info {
             align-items: center;
             display: flex;
             gap: 0.7rem;
             padding-left: 9px;
 
-            .feed-img{
+            .feed-img {
                 @include reset.width-height(35px, 35px);
 
-                img{
+                img {
                     @include reset.width-height(100%, 100%);
                     border-radius: 100px;
                     object-fit: cover;
                 }
             }
         }
-        svg{
+        svg {
             margin-right: 18px;
         }
     }
 
-    main{
-        .main-feed-img{
+    main {
+        .main-feed-img {
             max-height: 360px;
             width: 100%;
-            img{
+            img {
                 @include reset.width-height(100%, 100%);
             }
         }
 
-        .main-feed-icons{
+        .main-feed-icons {
             align-items: center;
             display: flex;
             justify-content: space-between;
             padding: 4px 12px 8px 12px;
 
-            .icons-interactions{
+            .icons-interactions {
                 display: flex;
                 gap: 0.4rem;
             }
 
-            svg{
+            svg {
                 @include reset.width-height(23px, 26px);
                 cursor: pointer;
             }
@@ -65,30 +65,40 @@ $var: 0;
     }
 
     .feed-likes{
-        align-items: center;
-        display: flex;
-        gap: 2.4rem;
+        max-width: 100%;
         padding: 0 12px;
 
-        .likes-imgs{
-            @include reset.width-height(20px, 20px);
+        .feed-imgs-infos {
+            align-items: center;
             display: flex;
-            img{
-                @include reset.width-height(100%, 100%);
-                border-radius: 100px;
-                object-fit: cover;
-
-
-
-                &:nth-child(2), &:nth-child(3){
-                    margin-left: -6px;
+            gap: 2.4rem;
+    
+            .infos-imgs {
+                @include reset.width-height(20px, 20px);
+                display: flex;
+                img {
+                    @include reset.width-height(100%, 100%);
+                    border-radius: 100px;
+                    object-fit: cover;
+    
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        margin-left: -6px;
+                    }
                 }
+            }
+
+            
+        }
+        .likes-infos{
+            p{
+                margin: 0;
             }
         }
 
-        p{
+        p {
             font-size: 12px;
-            a{
+            a {
                 color: black;
                 font-weight: 700;
             }
@@ -97,32 +107,32 @@ $var: 0;
 }
 
 @media screen and (min-width: reset.$sizeNotebook) {
-    .main-container-feed{
+    .main-container-feed {
         border-radius: 10px;
         margin-top: 20px;
         max-width: 520px;
         overflow: hidden;
 
-        main{
-            .main-feed-img{
+        main {
+            .main-feed-img {
                 max-height: 470px;
             }
 
-            .main-feed-icons{
+            .main-feed-icons {
                 padding: 14px 12px 8px 12px;
 
-                svg{
+                svg {
                     @include reset.width-height(28px, 30px);
                 }
             }
         }
 
-        .feed-likes{
-            .likes-imgs{
+        .feed-imgs-infos {
+            .infos-imgs {
                 @include reset.width-height(22px, 22px);
             }
-    
-            p{
+
+            p {
                 font-size: 16px;
             }
         }

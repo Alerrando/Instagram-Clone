@@ -43,24 +43,36 @@ export function Feed() {
 
       <footer>
         <div className="feed-likes">
-          <div className="likes-imgs">
-            <img
-              src="https://images.unsplash.com/photo-1661705969607-cde73828023d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
-              alt=""
-              className="likes-imgs-3"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1661600500531-aa1e8bd7cc11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=982&q=80"
-              alt=""
-              className="likes-imgs-2"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1660866838212-df428c885827?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-              alt=""
-              className="likes-imgs-1"
-            />
+          <div className="feed-imgs-infos">
+            <div className="infos-imgs">
+              <img
+                src="https://images.unsplash.com/photo-1661705969607-cde73828023d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
+                alt=""
+                className="infos-imgs-3"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1661600500531-aa1e8bd7cc11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=982&q=80"
+                alt=""
+                className="infos-imgs-2"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1660866838212-df428c885827?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                alt=""
+                className="infos-imgs-1"
+              />
+            </div>
+            <p>
+              Liked by <a href="#">{storiesInfos[1].name}</a> and{" "}
+              <a href="#">by other poeple</a>
+            </p>
           </div>
-            <p>Liked by <a href="#">{storiesInfos[1].name}</a> and <a href="#">by other poeple</a></p>
+          <div className="likes-infos">
+            <p>
+              <a href="#">{storiesInfos[1].name}</a> Lorem, ipsum dolor sit amet
+              consectetur adipisicing elit. Inventore architecto distinctio
+              placeat reprehenderit tempora.
+            </p>
+          </div>
         </div>
       </footer>
     </div>
