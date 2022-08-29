@@ -10,6 +10,8 @@ body {
     padding: 0;
 }
 
+a{text-decoration: none;}
+
 @mixin width-height($height, $width) {
     height: $height;
     width: $width;

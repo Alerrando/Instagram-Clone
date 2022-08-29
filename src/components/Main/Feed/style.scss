@@ -1,6 +1,14 @@
 @use '../../reset.scss';
 
-.main-container-feed{    
+$var: 0;
+@for $var from 3 through 1 {
+    .likes-imgs-#{$var}{
+        z-index: $var;
+    }
+}
+
+.main-container-feed{
+    background-color: white;
     header{
         align-items: center;
         display: flex;
@@ -30,9 +38,8 @@
     }
 
     main{
-        background-color: white;
         .main-feed-img{
-            max-height: 350px;
+            max-height: 360px;
             width: 100%;
             img{
                 @include reset.width-height(100%, 100%);
@@ -43,7 +50,7 @@
             align-items: center;
             display: flex;
             justify-content: space-between;
-            padding: 4px 12px 10px 12px;
+            padding: 4px 12px 8px 12px;
 
             .icons-interactions{
                 display: flex;
@@ -53,6 +60,37 @@
             svg{
                 @include reset.width-height(23px, 26px);
                 cursor: pointer;
+            }
+        }
+    }
+
+    .feed-likes{
+        align-items: center;
+        display: flex;
+        gap: 2.4rem;
+        padding: 0 12px;
+
+        .likes-imgs{
+            @include reset.width-height(20px, 20px);
+            display: flex;
+            img{
+                @include reset.width-height(100%, 100%);
+                border-radius: 100px;
+                object-fit: cover;
+
+
+
+                &:nth-child(2), &:nth-child(3){
+                    margin-left: -6px;
+                }
+            }
+        }
+
+        p{
+            font-size: 12px;
+            a{
+                color: black;
+                font-weight: 700;
             }
         }
     }
@@ -71,11 +109,21 @@
             }
 
             .main-feed-icons{
-                padding: 14px 12px;
+                padding: 14px 12px 8px 12px;
 
                 svg{
-                    @include reset.width-height(30px, 33px)
+                    @include reset.width-height(28px, 30px);
                 }
+            }
+        }
+
+        .feed-likes{
+            .likes-imgs{
+                @include reset.width-height(22px, 22px);
+            }
+    
+            p{
+                font-size: 16px;
             }
         }
     }
