@@ -18,10 +18,9 @@ header {
 
     .container-header {
         @extend .centralizer;
-        @include reset.width-height(100%, calc(935px + 40px));
+        @include reset.width-height(100%, 100%);
         border-bottom: 1px solid reset.$backgroundColorPrinc;
         justify-content: space-between;
-        max-width: calc(935px + 40px);
         padding: 0 20px;
 
         .img-Instagram {
