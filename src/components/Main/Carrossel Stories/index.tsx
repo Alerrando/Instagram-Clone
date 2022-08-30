@@ -17,7 +17,7 @@ export const storiesInfos = [
         name: "sara_wild",
 
         feed:{
-            url: "https://images.unsplash.com/photo-1660856514115-3e6d43e51021?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+            url: "https://images.unsplash.com/photo-1541497613813-0780960684f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
             time: Math.floor(Math.random() * (31 - 0 + 1)) + 0,
         },
     },
@@ -27,7 +27,7 @@ export const storiesInfos = [
         name: "gailharris",
 
         feed:{
-            url: "https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            url: "https://images.unsplash.com/photo-1660656387375-ea1ccefb91f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDExMHxGem8zenVPSE42d3x8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
             time: Math.floor(Math.random() * (31 - 0 + 1)) + 0,
         },
     },
@@ -37,7 +37,7 @@ export const storiesInfos = [
         name: "jessia_Hansen",
 
         feed:{
-            url: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            url: "https://images.unsplash.com/photo-1606593229618-5d6a0e9ce65a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHJpbyUyMGRlJTIwamFuZWlyb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
             time: Math.floor(Math.random() * (31 - 0 + 1)) + 0,
         },
     },
@@ -47,7 +47,7 @@ export const storiesInfos = [
         name: "Kimberly@Robi",
 
         feed:{
-            url: "https://images.unsplash.com/photo-1660856514115-3e6d43e51021?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+            url: "https://images.unsplash.com/photo-1661796428215-04fc2830aae6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
             time: Math.floor(Math.random() * (31 - 0 + 1)) + 0,
         },
     },
@@ -57,7 +57,7 @@ export const storiesInfos = [
         name: "smithJermaine",
 
         feed:{
-            url: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            url: "https://images.unsplash.com/photo-1661861622628-e033af571c0f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
             time: Math.floor(Math.random() * (31 - 0 + 1)) + 0,
         },
     },
@@ -67,7 +67,17 @@ export const storiesInfos = [
         name: "jessicamoore",
 
         feed:{
-            url: "https://images.unsplash.com/photo-1660856514115-3e6d43e51021?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+            url: "https://images.unsplash.com/photo-1661846141447-c39abc5ff583?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+            time: Math.floor(Math.random() * (31 - 0 + 1)) + 0,
+        },
+    },
+
+    {
+        url: 'https://images.unsplash.com/photo-1628493771937-278b05b46b62?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDF8dG93SlpGc2twR2d8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
+        name: "anaFondes",
+
+        feed:{
+            url: "https://images.unsplash.com/photo-1661638563864-7ade2d3ec500?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMTV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
             time: Math.floor(Math.random() * (31 - 0 + 1)) + 0,
         },
     },

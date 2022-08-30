@@ -39,10 +39,12 @@ $var: 0;
 
     main {
         .main-feed-img {
+            height: 360px;
             max-height: 360px;
             width: 100%;
             img {
                 @include reset.width-height(100%, 100%);
+                object-fit: cover;
             }
         }
 
@@ -137,6 +139,7 @@ $var: 0;
 
         main {
             .main-feed-img {
+                height: 470px;
                 max-height: 470px;
             }
 
