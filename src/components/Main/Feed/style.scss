@@ -68,6 +68,10 @@ $var: 0;
         max-width: 100%;
         padding: 0 12px;
 
+        a {
+            color: black;
+        }
+
         .feed-imgs-infos {
             align-items: center;
             display: flex;
@@ -95,19 +99,26 @@ $var: 0;
                 margin: 0;
             }
 
-            .comment{
+            .comment, .time{
                 color: #8e8e8e;
                 cursor: pointer;
                 margin: 4px 0;
+            }
+
+            span{
+                align-items: center;
+                display: flex;
+                gap: 0.6rem;
+
+                a{
+                    font-size: 12px;
+                }
             }
         }
 
         p {
             font-size: 12px;
-            a {
-                color: black;
-                font-weight: 700;
-            }
+            a{font-weight: 700;}
         }
     }
 }

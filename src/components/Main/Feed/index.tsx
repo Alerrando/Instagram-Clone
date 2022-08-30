@@ -73,6 +73,10 @@ export function Feed() {
               placeat reprehenderit tempora.
             </p>
             <p className="comment">See all 2 comments</p>
+            <span>
+              <a href="#" className="time">6 day ago</a>
+              <a href="#">View translation</a>
+            </span>
           </div>
         </div>
       </footer>
