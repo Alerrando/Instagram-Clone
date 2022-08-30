@@ -21,7 +21,6 @@ header {
         @include reset.width-height(100%, 100%);
         border-bottom: 1px solid reset.$backgroundColorPrinc;
         justify-content: space-between;
-        padding: 0 20px;
 
         .img-Instagram {
             @include reset.width-height(29px, 103px);
@@ -68,9 +67,10 @@ header {
     }
 }
 
-@media screen and (min-width: reset.$sizeNotebook) {
+@media screen and (min-width: (reset.$sizeNotebook+1)) {
     header {
         .container-header {
+            max-width: calc(935px + 40px);
             .img-Instagram {
                 @include reset.width-height(36px, 3335.5px);
                 img {
