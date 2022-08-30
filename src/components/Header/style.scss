@@ -67,12 +67,13 @@ header {
     }
 }
 
-@media screen and (min-width: (reset.$sizeNotebook+1)) {
+@media screen and (min-width: reset.$sizeNotebook) {
     header {
         .container-header {
             max-width: calc(935px + 40px);
             .img-Instagram {
                 @include reset.width-height(36px, 3335.5px);
+                margin-left: 20px;
                 img {
                     @include reset.width-height(29px, 103px);
                     object-fit: cover;
@@ -110,6 +111,7 @@ header {
             }
 
             nav {
+                margin-right: 20px;
                 padding-left: 90.75px;
 
                 ul {

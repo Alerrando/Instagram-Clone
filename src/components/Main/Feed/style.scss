@@ -99,7 +99,7 @@ $var: 0;
                 margin: 0;
             }
 
-            .comment, .time{
+            .quantComment, .time{
                 color: #8e8e8e;
                 cursor: pointer;
                 margin: 4px 0;
@@ -160,7 +160,8 @@ $var: 0;
             }
 
             .likes-infos{
-                .comment{
+
+                .quantComment{
                     font-size: 14px;
                 }
             }

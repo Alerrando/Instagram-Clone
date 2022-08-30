@@ -6,6 +6,7 @@ import {
   DotsThree,
   Heart,
   PaperPlaneTilt,
+  Smiley,
 } from "phosphor-react";
 
 export function Feed() {
@@ -72,12 +73,18 @@ export function Feed() {
               consectetur adipisicing elit. Inventore architecto distinctio
               placeat reprehenderit tempora.
             </p>
-            <p className="comment">See all 2 comments</p>
+            <p className="quantComment">See all 2 comments</p>
             <span>
               <a href="#" className="time">6 day ago</a>
               <a href="#">View translation</a>
             </span>
           </div>
+        </div>
+        <div className="comment">
+          <div className="comment-input">
+            <Smiley size={32} weight="bold" />
+            <input type="text" placeholder="Add a comment..." />
+         </div>
         </div>
       </footer>
     </div>
