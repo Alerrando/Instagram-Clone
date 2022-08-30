@@ -11,17 +11,21 @@ export function Header(){
                 </div>
 
                 <div className='search-container desktop' id="search-container">
-                    <MagnifyingGlass size={24} weight="bold" />
-                    <input type="text" name="search" id="search" placeholder='Search' />
+                    <div className='search'>
+                        <MagnifyingGlass size={24} weight="bold" />
+                        <input type="text" name="search" id="search" placeholder='Search' />
+                    </div>
                 </div>
 
                 <nav>
-                    <House size={24} weight="bold" className="desktop" />
-                    <PaperPlaneTilt size={24} weight="bold" />
-                    <PlusCircle size={24} weight="bold" />
-                    <Compass size={24} weight="bold" className="desktop" />
-                    <Heart size={24} weight="bold" />
-                    <User size={24} weight="bold" className="desktop" />
+                    <ul>
+                        <House size={24} weight="bold" className="desktop" />
+                        <PaperPlaneTilt size={24} weight="bold" />
+                        <PlusCircle size={24} weight="bold" />
+                        <Compass size={24} weight="bold" className="desktop" />
+                        <Heart size={24} weight="bold" />
+                        <User size={24} weight="bold" className="desktop" />
+                    </ul>
                 </nav>
             </div>
         </header>

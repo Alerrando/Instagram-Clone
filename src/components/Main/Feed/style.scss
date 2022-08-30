@@ -128,7 +128,10 @@ $var: 0;
                 padding: 14px 12px 8px 12px;
 
                 svg {
-                    @include reset.width-height(28px, 30px);
+                    @include reset.width-height(28px, 28px);
+                    &:hover{
+                        color: #8e8e8e;
+                    }
                 }
             }
         }

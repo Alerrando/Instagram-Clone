@@ -11,18 +11,21 @@
 }
 
 header {
-    @include reset.width-height(6rem, 100%);
+    @include reset.width-height(60px, 100%);
     @extend .centralizer;
     background-color: white;
+    justify-content: center;
 
     .container-header {
         @extend .centralizer;
         @include reset.width-height(100%, calc(935px + 40px));
         border-bottom: 1px solid reset.$backgroundColorPrinc;
         justify-content: space-between;
+        max-width: calc(935px + 40px);
+        padding: 0 20px;
 
         .img-Instagram {
-            @include reset.width-height(100%, 150px);
+            @include reset.width-height(29px, 103px);
             align-items: center;
             cursor: pointer;
             display: flex;
@@ -34,33 +37,30 @@ header {
         }
 
         nav {
-            @extend .centralizer;
-            display: grid;
-            grid-template-columns: repeat(3, 22px);
-            gap: 1.8rem;
-            padding-right: 2rem;
+            ul {
+                @extend .centralizer;
+                gap: 0.7rem;
+                svg {
+                    @include reset.width-height(24px, 24px);
+                    cursor: pointer;
 
-            svg {
-                @include reset.width-height(30px, 30px);
-                cursor: pointer;
+                    &:nth-child(1) > path {
+                        fill: black;
+                    }
 
-                &:nth-child(1) > path {
-                    fill: black;
-                }
+                    &:nth-child(2) {
+                        @include grid-colum-row(3, 1);
+                    }
 
-                &:nth-child(2){
-                    @include grid-colum-row(3, 1);
-                }
+                    &:nth-child(3) {
+                        @include grid-colum-row(1, 1);
+                    }
 
-                &:nth-child(3){
-                    @include grid-colum-row(1, 1);
-                }
-
-                &:nth-child(5){
-                    @include grid-colum-row(2, 1);
+                    &:nth-child(5) {
+                        @include grid-colum-row(2, 1);
+                    }
                 }
             }
-
         }
 
         .desktop {
@@ -71,15 +71,11 @@ header {
 
 @media screen and (min-width: reset.$sizeNotebook) {
     header {
-        height: 4rem;
-
         .container-header {
-            margin: 0 auto;
-
             .img-Instagram {
-                @include reset.width-height(100%, 150px);
+                @include reset.width-height(36px, 3335.5px);
                 img {
-                    @include reset.width-height(100%, 100%);
+                    @include reset.width-height(29px, 103px);
                     object-fit: cover;
                 }
 
@@ -88,45 +84,62 @@ header {
                 }
             }
 
-            nav {
-                grid-template-columns: repeat(6, 28px);
-                gap: 1.5rem;
-
-                svg {
-                    @include reset.width-height(30px, 30px);
-
-                    &:nth-child(1){
-                        @include grid-colum-row(1, 1);
-                    }
-                    &:nth-child(2){
-                        @include grid-colum-row(2, 1);
-                    }
-                    &:nth-child(3){
-                        @include grid-colum-row(3, 1);
-                    }
-                    &:nth-child(5){
-                        @include grid-colum-row(5, 1);
-                    }
-                    &:nth-child(6){
-                        @include grid-colum-row(6, 1);
-                    }
-                }
-            }
             #search-container {
                 align-items: center;
                 background-color: reset.$backgroundColorPrinc;
                 border-radius: 10px;
                 display: flex !important;
-                gap: 0.5rem;
-                padding: 7px 26px 7px 18px;
+                height: 36px;
+                padding: 0 16px;
+                width: 268px;
 
-                input {
-                    background-color: reset.$backgroundColorPrinc;
-                    border: none;
-                    font-size: 1rem;
-                    padding: 4px 5px;
-                    outline: none;
-                    width: 100%;
+                .search {
+                    align-items: center;
+                    height: 25px;
+                    display: flex;
+                    width: 236px;
+
+                    input {
+                        background-color: reset.$backgroundColorPrinc;
+                        border: none;
+                        font-size: 1rem;
+                        padding: 3px 16px 3px 16px;
+                        outline: none;
+                        width: 100%;
+                    }
+                }
+            }
+
+            nav {
+                padding-left: 90.75px;
+
+                ul {
+                    @include reset.width-height(24px, 278px);
+                    align-items: center;
+                    display: flex;
+                    grid-template-columns: repeat(6, 28px);
+                    gap: 1.5rem;
+                    padding: 0;
+
+                    svg {
+                        @include reset.width-height(36px, 36px);
+
+                        &:nth-child(1) {
+                            @include grid-colum-row(1, 1);
+                        }
+                        &:nth-child(2) {
+                            @include grid-colum-row(2, 1);
+                        }
+                        &:nth-child(3) {
+                            @include grid-colum-row(3, 1);
+                        }
+                        &:nth-child(5) {
+                            @include grid-colum-row(5, 1);
+                        }
+                        &:nth-child(6) {
+                            @include grid-colum-row(6, 1);
+                        }
+                    }
                 }
             }
 
