@@ -75,16 +75,19 @@ export function Feed() {
             </p>
             <p className="quantComment">See all 2 comments</p>
             <span>
-              <a href="#" className="time">6 day ago</a>
+              <a href="#" className="time">
+                6 day ago
+              </a>
               <a href="#">View translation</a>
             </span>
           </div>
-        </div>
-        <div className="comment">
-          <div className="comment-input">
-            <Smiley size={32} weight="bold" />
-            <input type="text" placeholder="Add a comment..." />
-         </div>
+          <div className="comment">
+            <div className="comment-input">
+              <Smiley size={32} weight="bold" />
+              <input type="text" placeholder="Add a comment..." />
+              <a href="#">Publish</a>
+            </div>
+          </div>
         </div>
       </footer>
     </div>

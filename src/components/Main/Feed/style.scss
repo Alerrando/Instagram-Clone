@@ -120,6 +120,10 @@ $var: 0;
             font-size: 12px;
             a{font-weight: 700;}
         }
+
+        .comment{
+            display: none;
+        }
     }
 }
 
@@ -163,6 +167,37 @@ $var: 0;
 
                 .quantComment{
                     font-size: 14px;
+                }
+            }
+
+            .comment{
+                @include reset.width-height(40px, 100%);
+                border-top: 1px solid #DFDFDF;
+                display: block;
+                padding: 4px 16px;
+
+                .comment-input{
+                    @include reset.width-height(100%, 100%);
+                    align-items: center;
+                    display: flex;
+
+                    svg{
+                        @include reset.width-height(28px, 28px);
+                        padding: 0 12px 0 0;
+                    }
+
+                    input{
+                        @include reset.width-height(18px, 380px);
+                        border: none;
+                        outline: none;
+                    }
+
+                    a{
+                        @include reset.width-height(18px, 53.5469px);
+                        color: #0095F6;
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
                 }
             }
         }
