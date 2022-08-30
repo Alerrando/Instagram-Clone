@@ -74,8 +74,8 @@ yarn add sass
 
 ## 🖥️ Demo
 <div align="center">
-    <br/>
-     <h2>🚧 Em contrução</h3>
+    <img src="./github/InstagramClonePc.gif" alt="demo do projeto Instagram Pc">
+    <img src="./github/InstagramCloneMobile.gif" alt="demo do projeto Instagram Mobile">
 </div>
 
 
