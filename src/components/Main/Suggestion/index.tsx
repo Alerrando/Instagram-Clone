@@ -2,32 +2,32 @@ import "./style.scss";
 
 const suggestionPeople = [
   {
-    url: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-    name: "phote ????",
+    url: "https://images.unsplash.com/photo-1661065266388-fa817d6d7d3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDd8dG93SlpGc2twR2d8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+    name: "Melvin Ramirez",
     follow: "Suggestion for you",
   },
 
   {
-    url: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-    name: "phote ????",
+    url: "https://images.unsplash.com/photo-1661546820803-a30a643279e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE0fHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    name: "George Salazar",
     follow: "Followed by ####"
   },
 
   {
-    url: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-    name: "phote ????",
+    url: "https://images.unsplash.com/photo-1661540020819-095b5f9c1ebc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE4fHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    name: "Rachel Burch",
     follow: "Suggestion for you",
   },
 
   {
-    url: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-    name: "phote ????",
+    url: "https://images.unsplash.com/photo-1660974739683-34d9e120c305?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDQyfHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    name: "Robert Boyd",
     follow: "Suggestion for you",
   },
 
   {
-    url: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-    name: "phote ????",
+    url: "https://images.unsplash.com/photo-1661543035218-4a83d8d85e9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE3fHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    name: "Rhonda Walls",
     follow: "Suggestion for you",
   },
 ];
@@ -47,12 +47,12 @@ export function Suggestion() {
               <div className="suggestion-img">
                 <img
                   src={suggestionPeople[index].url}
-                  alt={suggestionPeople[index].name}
+                  alt={`photo of ${suggestionPeople[index].name}`}
                 />
               </div>
 
               <div className="suggestion-info">
-                <p>Lorem ipsum dolor</p>
+                <p>{suggestionPeople[index].name}</p>
                 <p>{suggestionPeople[index].follow}</p>
               </div>
 

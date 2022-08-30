@@ -44,7 +44,7 @@ export const storiesInfos = [
 
     {
         url: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
-        name: "Kimberly@Robi",
+        name: "Kimbe@Robi",
 
         feed:{
             url: "https://images.unsplash.com/photo-1661796428215-04fc2830aae6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
@@ -54,7 +54,7 @@ export const storiesInfos = [
 
     {
         url: 'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
-        name: "smithJermaine",
+        name: "smithJerma",
 
         feed:{
             url: "https://images.unsplash.com/photo-1661861622628-e033af571c0f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
