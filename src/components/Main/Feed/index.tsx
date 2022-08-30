@@ -72,6 +72,7 @@ export function Feed() {
               consectetur adipisicing elit. Inventore architecto distinctio
               placeat reprehenderit tempora.
             </p>
+            <p className="comment">See all 2 comments</p>
           </div>
         </div>
       </footer>

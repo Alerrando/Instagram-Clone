@@ -94,6 +94,12 @@ $var: 0;
             p{
                 margin: 0;
             }
+
+            .comment{
+                color: #8e8e8e;
+                cursor: pointer;
+                margin: 4px 0;
+            }
         }
 
         p {
@@ -127,14 +133,24 @@ $var: 0;
             }
         }
 
-        .feed-imgs-infos {
-            .infos-imgs {
-                @include reset.width-height(22px, 22px);
+        .feed-likes{
+            .feed-imgs-infos {
+                .infos-imgs {
+                    @include reset.width-height(22px, 22px);
+                    cursor: pointer;
+                }
+    
+                p {
+                    font-size: 16px;
+                }
             }
 
-            p {
-                font-size: 16px;
+            .likes-infos{
+                .comment{
+                    font-size: 14px;
+                }
             }
         }
+
     }
 }
