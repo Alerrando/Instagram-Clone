@@ -5,8 +5,7 @@ export function InfosMain(){
     return(
         <header>
             <div className="user">
-                <div className="outline"></div>
-                <User weight="bold" />
+                <img src="https://avatars.githubusercontent.com/u/90356500?v=4" alt="photo of alerrando" />
             </div>
 
             <div className="header-info">

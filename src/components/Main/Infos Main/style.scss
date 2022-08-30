@@ -28,20 +28,10 @@
                 display: flex;
                 position: relative;
 
-                .outline {
-                    @include reset.width-height(65px, 65px);
-                    background-color: #ccc;
-                    border: 1px solid black;
-                    border-radius: 100px;
-                    position: absolute;
-                    z-index: -1;
-                }
-
-                svg {
+                img{
                     @include reset.width-height(100%, 100%);
                     border-radius: 100px;
-                    margin: 10px 0 0 8px;
-                    z-index: 1;
+                    object-fit: cover;
                 }
             }
 

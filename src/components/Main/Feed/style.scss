@@ -129,8 +129,9 @@ $var: 0;
 
 @media screen and (min-width: reset.$sizeNotebook) {
     .main-container-feed {
+        border: 1px solid #DBDBDB;
         border-radius: 10px;
-        margin-top: 20px;
+        margin: 20px 0;
         max-width: 520px;
         overflow: hidden;
 
@@ -174,7 +175,7 @@ $var: 0;
                 @include reset.width-height(40px, 100%);
                 border-top: 1px solid #DFDFDF;
                 display: block;
-                padding: 4px 16px;
+                padding: 4px 0;
 
                 .comment-input{
                     @include reset.width-height(100%, 100%);
