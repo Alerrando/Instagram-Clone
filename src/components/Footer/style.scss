@@ -1,0 +1,7 @@
+@use '../reset.scss';
+
+@media screen and (min-width: $sizeNotebook){
+    footer{
+        display: none;
+    }
+}
