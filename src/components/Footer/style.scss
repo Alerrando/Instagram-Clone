@@ -18,6 +18,16 @@
         svg{
             @include reset.width-height(30px, 30px);
         }
+
+        img{
+            @include reset.width-height(25px, 25px);
+            border-radius: 100px;
+            object-fit: cover;
+        }
+
+        .page-current > path{
+            fill: black;
+        }
     }
 }
 
