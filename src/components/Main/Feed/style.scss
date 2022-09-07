@@ -129,7 +129,7 @@ $var: 0;
     }
 }
 
-@media screen and (min-width: reset.$sizeNotebook) {
+@media screen and (min-width: 868px) {
     .main-container-feed {
         border: 1px solid #DBDBDB;
         border-radius: 10px;

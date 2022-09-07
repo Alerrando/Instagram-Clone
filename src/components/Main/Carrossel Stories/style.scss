@@ -13,13 +13,14 @@
             cursor: pointer;
     
             .stories-img {
+                @include reset.width-height(60px, 60px);
                 align-items: center;
                 display: flex;
                 justify-content: center;
                 position: relative;
     
                 .storie-open {
-                    
+                    @include reset.width-height(65px, 65px);
                     background: linear-gradient(#fff, #fff) padding-box, linear-gradient(45deg, slateblue, coral) border-box;
                     border: 4px solid transparent;
                     border-radius: 100px;
@@ -46,26 +47,8 @@
     }
 }
 
-@media screen and (max-width: reset.$sizeMobile) {
-    .stories-feed{
-        border-bottom: 1px solid reset.$backgroundColorPrinc;
-        .stories-container{
-            .stories{
-                .stories-img{
-                    @include reset.width-height(60px, 60px);
-            
-                    .storie-open{
-                        @include reset.width-height(65px, 65px);
-                    }
-                }
-            }
-        }
-    }
-}
 
-
-
-@media screen and (min-width: reset.$sizeNotebook){
+@media screen and (min-width: 868px){
     .stories-feed{
         height: 10rem;
         .stories-container{

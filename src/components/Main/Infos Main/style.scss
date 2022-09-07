@@ -4,13 +4,13 @@
     display: none;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
     .container-infos{
         display: none !important;
     }
 }
 
-@media screen and (min-width: reset.$sizeNotebook) {
+@media screen and (min-width: 960px) {
     .container-infos {
         display: block;
         height: 120px;
