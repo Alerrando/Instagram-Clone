@@ -4,13 +4,16 @@
     display: none;
 }
 
-@media screen and (max-width: 900px) {
+a{text-decoration: none;}
+
+@media screen and (max-width: 960px) {
     .container-infos{
         display: none !important;
     }
 }
 
-@media screen and (min-width: 960px) {
+
+@media screen and (min-width: 1000px) {
     .container-infos {
         display: block;
         height: 120px;

@@ -42,10 +42,6 @@ header {
                     @include reset.width-height(24px, 24px);
                     cursor: pointer;
 
-                    &:nth-child(1) > path {
-                        fill: black;
-                    }
-
                     &:nth-child(2) {
                         @include grid-colum-row(3, 1);
                     }
@@ -57,6 +53,17 @@ header {
                     &:nth-child(5) {
                         @include grid-colum-row(2, 1);
                     }
+                }
+
+                a{
+                    svg{
+                        @include reset.width-height(24px, 24px);
+                        color: black;
+                    }
+                }
+
+                .page-current > path{
+                    fill: black;
                 }
             }
         }
@@ -143,6 +150,12 @@ header {
                         }
                         &:nth-child(6) {
                             @include grid-colum-row(6, 1);
+                        }
+                    }
+
+                    a{
+                        svg{
+                            @include reset.width-height(25px, 25px);
                         }
                     }
                 }

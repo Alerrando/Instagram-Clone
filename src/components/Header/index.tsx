@@ -1,4 +1,5 @@
 import { CaretDown, PlusCircle, Heart, PaperPlaneTilt, House, Compass, User, MagnifyingGlass } from 'phosphor-react'
+import { Link } from 'react-router-dom'
 import './style.scss'
 
 export function Header(){
@@ -19,8 +20,10 @@ export function Header(){
 
                 <nav>
                     <ul>
-                        <House size={24} weight="bold" className="desktop" />
-                        <PaperPlaneTilt size={24} weight="bold" />
+                        <House size={24} weight="bold" className="desktop page-current" />
+                        <Link to="/direct">
+                            <PaperPlaneTilt size={24} weight="bold" />
+                        </Link>
                         <PlusCircle size={24} weight="bold" />
                         <Compass size={24} weight="bold" className="desktop" />
                         <Heart size={24} weight="bold" />
