@@ -1,0 +1,39 @@
+@use "../../../components/reset.scss";
+
+.centralizer {
+    align-items: center;
+    display: flex;
+}
+
+header {
+
+    .container-header {
+
+        .mobile{
+            @extend .centralizer;
+            background-color: reset.$backgroundColorPrinc;
+            justify-content: space-between;
+            padding: 0 1rem;
+            width: 100%;
+        }
+
+        .desktop {
+            display: none;
+        }
+
+    }
+}
+
+@media screen and (min-width: reset.$sizeNotebook) {
+    header {
+        .container-header {
+            .mobile{
+                display: none;
+            }
+
+            .desktop {
+                display: flex !important;
+            }
+        }
+    }
+}

@@ -25,11 +25,11 @@ header {
         .img-Instagram {
             @include reset.width-height(29px, 103px);
             align-items: center;
-            cursor: pointer;
             display: flex;
-
+            
             img {
                 @include reset.width-height(100%, 100%);
+                cursor: pointer;
                 object-fit: cover;
             }
         }
