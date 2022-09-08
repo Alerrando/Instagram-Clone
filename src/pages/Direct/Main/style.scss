@@ -1,0 +1,40 @@
+@use "../../../components/reset.scss";
+
+main {
+    background-color: white;
+    .search-main {
+        align-items: center;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+
+        .search {
+            align-items: center;
+            background-color: reset.$backgroundColorPrinc;
+            border-radius: 10px;
+            height: 35px;
+            display: flex;
+            width: 90%;
+
+            svg{
+                padding: 0 10px;
+            }
+
+            input {
+                background-color: reset.$backgroundColorPrinc;
+                border: none;
+                font-size: 1rem;
+                padding: 0px 16px;
+                outline: none;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: reset.$sizeNotebook) {
+    .mobile {
+        display: none !important;
+    }
+}

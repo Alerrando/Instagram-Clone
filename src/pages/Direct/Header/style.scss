@@ -6,7 +6,6 @@
 }
 
 header {
-
     .container-header {
         a{
             color: black;
@@ -14,11 +13,12 @@ header {
         }
 
         .mobile{
-            @extend .centralizer;
-            background-color: reset.$backgroundColorPrinc;
-            justify-content: space-between;
-            padding: 0 1rem;
             width: 100%;
+            header{
+                @extend .centralizer;
+                background-color: reset.$backgroundColorPrinc;
+                justify-content: space-around;
+            }
         }
 
         .desktop {
