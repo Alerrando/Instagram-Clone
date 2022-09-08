@@ -8,6 +8,10 @@
 header {
 
     .container-header {
+        a{
+            color: black;
+            display: flex
+        }
 
         .mobile{
             @extend .centralizer;

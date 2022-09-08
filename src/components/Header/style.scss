@@ -37,14 +37,17 @@ header {
         nav {
             ul {
                 @extend .centralizer;
+                display: grid;
                 gap: 0.7rem;
+
+                a{
+                    @include grid-colum-row(3, 1);
+                }
+
                 svg {
                     @include reset.width-height(24px, 24px);
                     cursor: pointer;
 
-                    &:nth-child(2) {
-                        @include grid-colum-row(3, 1);
-                    }
 
                     &:nth-child(3) {
                         @include grid-colum-row(1, 1);

@@ -19,7 +19,9 @@ export function Header(){
                 </div>
 
                 <div className='mobile'>
-                    <ArrowLeft size={24} weight="bold"/>
+                    <Link to="/">
+                        <ArrowLeft size={24} weight="bold"/>
+                    </Link>
                     <h2>alerrandob</h2>
                     <Plus size={32} weight="bold" />
                 </div>
