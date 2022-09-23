@@ -4,7 +4,7 @@ import './style.scss'
 
 export function Header(){
     return(
-        <header>
+        <header className="header-princ">
             <div className="container-header">
                 <div className="img-Instagram">
                     <img src="https://www.svgrepo.com/show/353903/instagram.svg" alt="Instagram picture written" />

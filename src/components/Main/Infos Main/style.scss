@@ -13,7 +13,7 @@ a{text-decoration: none;}
 }
 
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: reset.$sizeNotebook) {
     .container-infos {
         display: block;
         height: 120px;

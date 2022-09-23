@@ -1,7 +1,12 @@
 @use "../../../components/reset.scss";
 
+@media screen and (max-width: reset.$sizeMobile) {
+    main{
+        background-color: white;
+    }
+}
+
 main {
-    background-color: white;
     .search-main {
         align-items: center;
         border-radius: 10px;

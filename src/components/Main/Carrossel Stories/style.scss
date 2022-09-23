@@ -48,7 +48,7 @@
 }
 
 
-@media screen and (min-width: 868px){
+@media screen and (min-width: reset.$sizeNotebook){
     .stories-feed{
         height: 10rem;
         .stories-container{

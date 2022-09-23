@@ -10,23 +10,23 @@
     display: flex;
 }
 
-header {
+.header-princ {
     @include reset.width-height(60px, 100%);
     @extend .centralizer;
     background-color: white;
+    border-bottom: 1px solid reset.$backgroundColorPrinc;
     justify-content: center;
 
     .container-header {
         @extend .centralizer;
         @include reset.width-height(100%, 91%);
-        border-bottom: 1px solid reset.$backgroundColorPrinc;
         justify-content: space-between;
 
         .img-Instagram {
             @include reset.width-height(29px, 103px);
             align-items: center;
             display: flex;
-            
+
             img {
                 @include reset.width-height(100%, 100%);
                 cursor: pointer;
@@ -40,14 +40,13 @@ header {
                 display: grid;
                 gap: 0.7rem;
 
-                a{
+                a {
                     @include grid-colum-row(3, 1);
                 }
 
                 svg {
                     @include reset.width-height(24px, 24px);
                     cursor: pointer;
-
 
                     &:nth-child(3) {
                         @include grid-colum-row(1, 1);
@@ -58,14 +57,14 @@ header {
                     }
                 }
 
-                a{
-                    svg{
+                a {
+                    svg {
                         @include reset.width-height(24px, 24px);
                         color: black;
                     }
                 }
 
-                .page-current > path{
+                .page-current > path {
                     fill: black;
                 }
             }
@@ -75,21 +74,22 @@ header {
             display: none;
         }
 
-        #search-container{
+        #search-container {
             display: none;
         }
     }
 }
 
 @media screen and (min-width: reset.$sizeNotebook) {
-    header {
+    .header-princ {
+        height: 68px;
         .container-header {
             max-width: calc(935px + 40px);
             .img-Instagram {
                 @include reset.width-height(36px, 3335.5px);
                 margin-left: 20px;
                 img {
-                    @include reset.width-height(29px, 103px);
+                    @include reset.width-height(36px, 112px);
                     object-fit: cover;
                 }
 
@@ -103,21 +103,24 @@ header {
                 background-color: reset.$backgroundColorPrinc;
                 border-radius: 10px;
                 display: flex !important;
-                height: 36px;
+                height: 40px;
                 padding: 0 16px;
-                width: 268px;
 
                 .search {
                     align-items: center;
-                    height: 25px;
+                    height: 36px;
                     display: flex;
-                    width: 236px;
+                    width: 242px;
+
+                    svg {
+                        color: #8e8e8e;
+                    }
 
                     input {
                         background-color: reset.$backgroundColorPrinc;
                         border: none;
                         font-size: 1rem;
-                        padding: 3px 16px 3px 16px;
+                        padding: 3px 16px;
                         outline: none;
                         width: 100%;
                     }
@@ -156,8 +159,8 @@ header {
                         }
                     }
 
-                    a{
-                        svg{
+                    a {
+                        svg {
                             @include reset.width-height(25px, 25px);
                         }
                     }

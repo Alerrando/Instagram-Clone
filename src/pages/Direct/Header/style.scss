@@ -5,16 +5,17 @@
     display: flex;
 }
 
-header {
+.header-princ.direct {
+    height: auto;
     .container-header {
-        a{
+        a {
             color: black;
-            display: flex
+            display: flex;
         }
 
-        .mobile{
+        .mobile {
             width: 100%;
-            header{
+            header {
                 @extend .centralizer;
                 background-color: reset.$backgroundColorPrinc;
                 justify-content: space-around;
@@ -24,35 +25,34 @@ header {
         .desktop {
             display: none;
         }
-
     }
 }
 
 @media screen and (min-width: reset.$sizeNotebook) {
-    header {
+    .header-princ {
         .container-header {
-            .img-Instagram.direct{
+            .img-Instagram.direct {
                 margin-left: 11px;
             }
 
-            .mobile{
+            .mobile {
                 display: none;
             }
 
             .desktop {
                 display: flex !important;
 
-                ul{
-                    a:nth-child(1){
-                        svg{
+                ul {
+                    a:nth-child(1) {
+                        svg {
                             @include reset.width-height(28px, 28px);
                         }
                     }
                 }
             }
 
-            .nav-direct{
-                margin-right: 33px;
+            .nav-direct {
+                margin-right: 30px;
             }
         }
     }
