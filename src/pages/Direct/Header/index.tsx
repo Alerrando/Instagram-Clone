@@ -6,7 +6,7 @@ export function Header(){
     return(
         <header>
             <div className="container-header">
-                <div className="img-Instagram desktop">
+                <div className="img-Instagram desktop direct">
                     <img src="https://www.svgrepo.com/show/353903/instagram.svg" alt="Instagram picture written" />
                     <CaretDown size={16} weight="bold"/>
                 </div>
@@ -28,7 +28,7 @@ export function Header(){
                     </header>
                 </div>
 
-                <nav className='desktop'>
+                <nav className='desktop nav-direct'>
                     <ul>
                         <Link to="/">
                             <House size={24} weight="bold" className="desktop" />

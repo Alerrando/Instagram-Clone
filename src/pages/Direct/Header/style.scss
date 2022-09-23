@@ -31,12 +31,28 @@ header {
 @media screen and (min-width: reset.$sizeNotebook) {
     header {
         .container-header {
+            .img-Instagram.direct{
+                margin-left: 11px;
+            }
+
             .mobile{
                 display: none;
             }
 
             .desktop {
                 display: flex !important;
+
+                ul{
+                    a:nth-child(1){
+                        svg{
+                            @include reset.width-height(28px, 28px);
+                        }
+                    }
+                }
+            }
+
+            .nav-direct{
+                margin-right: 33px;
             }
         }
     }

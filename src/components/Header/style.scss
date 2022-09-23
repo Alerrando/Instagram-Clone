@@ -18,7 +18,7 @@ header {
 
     .container-header {
         @extend .centralizer;
-        @include reset.width-height(100%, 100%);
+        @include reset.width-height(100%, 91%);
         border-bottom: 1px solid reset.$backgroundColorPrinc;
         justify-content: space-between;
 
