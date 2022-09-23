@@ -23,7 +23,7 @@ export function Header(){
                         <Link to="/">
                             <ArrowLeft size={24} weight="bold"/>
                         </Link>
-                        <h2>alerrandob</h2>
+                        <h2 translate='no'>alerrandob</h2>
                         <Plus size={32} weight="bold" />
                     </header>
                 </div>
