@@ -18,6 +18,7 @@ main {
             align-items: center;
             background-color: reset.$backgroundColorPrinc;
             border-radius: 10px;
+            height: 36px;
             display: flex;
             width: 90%;
 
@@ -35,10 +36,71 @@ main {
             }
         }
     }
+
+    .stories-feed.direct{
+        overflow-x: auto;
+        .stories-container {
+            align-items: center;
+            display: flex;
+            gap: 30px;
+            padding: 20px 18px 8px 18px;
+        
+            .stories {
+                display: block;
+                cursor: pointer;
+        
+                .stories-img {
+                    @include reset.width-height(60px, 60px);
+                    align-items: center;
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+        
+                    img {
+                        @include reset.width-height(100%, 100%);
+                        border-radius: 100px;
+                        object-fit: cover;
+                        z-index: 2;
+                    }
+                }
+        
+                .name-storie {
+                    align-items: center;
+                    display: flex;
+                    font-size: 0.7rem;
+                    justify-content: center;
+                }
+        
+            }
+        }
+    }
 }
 
 @media screen and (min-width: reset.$sizeNotebook) {
     .mobile {
         display: none !important;
+    }
+
+    .stories-feed.direct{
+        height: 10rem;
+        .stories-container{
+            gap: 20px;
+            padding: 14px 20px;
+            
+            .stories{
+                .stories-img {
+                    @include reset.width-height(65px, 65px);
+            
+                    .storie-open{
+                        @include reset.width-height(70px, 70px);
+                        border: 3px solid transparent;
+                    }
+                }
+            
+                .name-storie{
+                    font-size: 0.8rem;
+                }
+            }
+        }
     }
 }

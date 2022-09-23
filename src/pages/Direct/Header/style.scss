@@ -6,6 +6,7 @@
 }
 
 .header-princ.direct {
+    background-color: rgb(233, 233, 233);
     height: auto;
     .container-header {
         a {
@@ -18,7 +19,7 @@
             header {
                 @extend .centralizer;
                 background-color: reset.$backgroundColorPrinc;
-                justify-content: space-around;
+                justify-content: space-between;
             }
         }
 
@@ -29,7 +30,9 @@
 }
 
 @media screen and (min-width: reset.$sizeNotebook) {
-    .header-princ {
+    .header-princ.direct {
+        background-color: white;
+        height: 68px;
         .container-header {
             .img-Instagram.direct {
                 margin-left: 11px;
