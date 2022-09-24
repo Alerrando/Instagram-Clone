@@ -7,6 +7,7 @@
 }
 
 main {
+    overflow-y: hidden;
     .search-main {
         align-items: center;
         border-radius: 10px;
@@ -46,8 +47,20 @@ main {
             padding: 20px 18px 8px 18px;
         
             .stories {
-                display: block;
                 cursor: pointer;
+                display: block;
+                max-width: 60px;
+                position: relative;
+
+                .online{
+                    @include reset.width-height(11px, 11px);
+                    background-color: #78DE45;
+                    border-radius: 100px;
+                    left: 72%;
+                    position: absolute;
+                    top: 50%;
+                    z-index: 100;
+                }
         
                 .stories-img {
                     @include reset.width-height(60px, 60px);

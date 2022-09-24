@@ -9,8 +9,9 @@
         padding: 20px 18px 8px 18px;
     
         .stories {
-            display: block;
             cursor: pointer;
+            display: block;
+            max-width: 60px;
     
             .stories-img {
                 @include reset.width-height(60px, 60px);
@@ -52,7 +53,7 @@
     .stories-feed{
         height: 10rem;
         .stories-container{
-            gap: 20px;
+            gap: 25px;
             padding: 14px 20px;
             
             .stories{

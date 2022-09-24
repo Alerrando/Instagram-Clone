@@ -16,6 +16,7 @@ export function Main() {
           {storiesInfos.map((storie, index) => (
             index !== 0 ? (
               <div className="stories" key={index}>
+                <div className="online"></div>
                 <div className="stories-img">
                   <img src={storiesInfos[index].url} alt="" />
                 </div>
