@@ -13,7 +13,7 @@ export function InfosMain(){
                 <p>Alerrando Breno</p>
             </div>
 
-            <a href="#">Mudar</a>
+            <a href="#" className="change">Change</a>
         </header>
     )
 }

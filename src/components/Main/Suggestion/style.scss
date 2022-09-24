@@ -13,12 +13,14 @@
         }
 
         a {
-            color: black;
             font-size: 12px;
         }
     }
 
     main {
+        a{
+            color: #0095F6;
+        }
         .main-container-suggestion{
             align-items: center;
             display: flex;
@@ -53,6 +55,7 @@
                     }
                 }
             }
+
         }
     }
 
