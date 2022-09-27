@@ -8,6 +8,11 @@
 
 main {
     overflow-y: hidden;
+
+    .desktop{
+        display: none
+    }
+
     .search-main {
         align-items: center;
         border-radius: 10px;
@@ -41,25 +46,27 @@ main {
     .stories-feed.direct{
         overflow-x: auto;
         .stories-container {
-            align-items: center;
-            display: flex;
-            gap: 30px;
-            padding: 20px 18px 8px 18px;
+            display: grid;
+            padding: 20px 26px;
+            gap: 5px;
         
             .stories {
                 cursor: pointer;
-                display: block;
-                max-width: 60px;
+                display: flex;
+                gap: 20px;
+                max-width: none;
                 position: relative;
+                width: 100%;
+
 
                 .online{
                     @include reset.width-height(11px, 11px);
                     background-color: #78DE45;
                     border: 4px solid white;
                     border-radius: 100px;
-                    left: 72%;
+                    left: 12%;
                     position: absolute;
-                    top: 46%;
+                    top: 68%;
                     z-index: 100;
                 }
         
@@ -79,10 +86,13 @@ main {
                 }
         
                 .name-storie {
-                    align-items: center;
-                    display: flex;
-                    font-size: 0.7rem;
-                    justify-content: center;
+                    display: grid;
+                    font-size: 0.8rem;
+                    gap: 6px;
+
+                    span{
+                        opacity: 0.6;
+                    }
                 }
         
             }
@@ -91,49 +101,86 @@ main {
 }
 
 @media screen and (min-width: reset.$sizeNotebook) {
-    .mobile {
-        display: none !important;
-    }
+    
+    main{
+        .desktop{
+            display: block;
+        }
 
-    .container-message{
-        align-items: center;
-        background-color: white;
-        display: flex;
-        margin: 23px auto;
-        justify-content: center;
-        width: 332px;
-        .stories-feed.direct{
-            @include reset.width-height(515px, 100%);
-            padding: 24px 0px 24px 4px;
-            .stories-container{
-                display: grid;
-                gap: 20px;
-                padding: 14px 20px;
-                
-                .stories{
+        .mobile {
+            display: none !important;
+        }
+
+        .container-message{
+            align-items: center;
+            background-color: white;
+            border: 2px solid #DBDBDB;
+            display: block;
+            margin: 23px auto;
+            justify-content: center;
+            width: 332px;
+
+            .account-message{
+                align-items: center;
+                border-bottom: 1px solid #DBDBDB;
+                display: flex;
+                justify-content: space-around;
+
+                h2{
+                    font-size: 1.2rem;
+                }
+
+                .name-account{
+                    align-items: center;
                     display: flex;
+                    gap: 6px;
+                    justify-content: center;
+                }
+            }
+
+            .stories-feed.direct{
+                @include reset.width-height(494px, 100%);
+                padding: 24px 0;
+                width: 100%;
+                overflow-x: hidden;
+    
+                .stories-container{
+                    display: grid;
                     gap: 20px;
-                    max-width: none;
-
-                    .online{
-                        left: 20%;
-                        top: 65%;
-                    }
-
-                    .stories-img {
-                        @include reset.width-height(65px, 65px);
-                        
-                        img{
-                            max-width: 65px;
+                    padding: 0;
+                    
+                    .stories{
+                        cursor: pointer;
+                        display: flex;
+                        gap: 20px;
+                        max-width: none;
+                        padding-left: 20px;
+                        width: 100%;
+    
+                        .online{
+                            left: 20%;
+                            top: 65%;
                         }
-                    }
-                
-                    .name-storie{
-                        font-size: 0.8rem;
+    
+                        .stories-img {
+                            @include reset.width-height(65px, 65px);
+                            
+                            img{
+                                max-width: 65px;
+                            }
+                        }
+                    
+                        .name-storie{
+                            font-size: 0.8rem;
+    
+                        }
+    
+                        &:hover{
+                            background-color: rgb(250, 250, 250);
+                        }
                     }
                 }
             }
         }
     }
-
 }
