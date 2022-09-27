@@ -94,26 +94,35 @@ main {
         display: none !important;
     }
 
-    .stories-feed.direct{
-        height: 10rem;
-        .stories-container{
-            gap: 20px;
-            padding: 14px 20px;
-            
-            .stories{
-                .stories-img {
-                    @include reset.width-height(65px, 65px);
-            
-                    .storie-open{
-                        @include reset.width-height(70px, 70px);
-                        border: 3px solid transparent;
+    .container-message{
+        align-items: center;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        .stories-feed.direct{
+            @include reset.width-height(515px, 332px);
+            padding: 24px 24px 24px 24px;
+            .stories-container{
+                display: block;
+                gap: 20px;
+                padding: 14px 20px;
+                
+                .stories{
+                    .stories-img {
+                        @include reset.width-height(65px, 65px);
+                
+                        .storie-open{
+                            @include reset.width-height(70px, 70px);
+                            border: 3px solid transparent;
+                        }
                     }
-                }
-            
-                .name-storie{
-                    font-size: 0.8rem;
+                
+                    .name-storie{
+                        font-size: 0.8rem;
+                    }
                 }
             }
         }
     }
+
 }
