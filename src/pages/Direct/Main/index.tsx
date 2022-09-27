@@ -4,7 +4,7 @@ import "./style.scss";
 
 export function Main() {
   return (
-    <main>
+    <main className="main-direct">
       <header className="search-main mobile">
         <div className="search">
           <MagnifyingGlass size={24} weight="bold" />
@@ -12,38 +12,45 @@ export function Main() {
         </div>
       </header>
       <main className="container-message">
-        <div className="account-message desktop">
-          <div></div>
-          <div className="name-account">
-            <h2 translate="no">alerrandob</h2>
-            <CaretDown size={24} weight="bold"/>
+        <div>
+
+          <div className="account-message desktop">
+            <div></div>
+            <div className="name-account">
+              <h2 translate="no" className="h2">alerrandob</h2>
+              <CaretDown size={24} weight="bold"/>
+            </div>
+            <ChatText size={28} weight="bold" />
           </div>
-          <ChatText size={28} weight="bold" />
-        </div>
-        <div className="stories-feed direct">
-          <div className="stories-container">
-            {storiesInfos.map((storie, index) =>
-              index !== 0 ? (
-                <div className="stories" key={index}>
-                  <div className="online"></div>
-                  <div className="stories-img">
-                    <img src={storiesInfos[index].url} alt="" />
+          <div className="stories-feed direct">
+            <div className="stories-container">
+              {storiesInfos.map((storie, index) =>
+                index !== 0 ? (
+                  <div className="stories" key={index}>
+                    <div className="online"></div>
+                    <div className="stories-img">
+                      <img src={storiesInfos[index].url} alt="" />
+                    </div>
+
+                    <p translate="no" className="name-storie">
+                      {storiesInfos[index].name}
+                      <span>Online 14h</span>
+                    </p>
                   </div>
+                ) : null
+              )}
+            </div>
 
-                  <p translate="no" className="name-storie">
-                    {storiesInfos[index].name}
-                    <span>Online 14h</span>
-                  </p>
-                </div>
-              ) : null
-            )}
-          </div>
-
-          <div>
-            
+            <div className="chat-message">
+                
+            </div>
           </div>
         </div>
       </main>
+
+      <aside className="container-aside desktop">
+        
+      </aside>
     </main>
   );
 }

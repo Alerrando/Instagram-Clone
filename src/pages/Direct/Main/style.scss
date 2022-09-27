@@ -1,12 +1,12 @@
 @use "../../../components/reset.scss";
 
 @media screen and (max-width: reset.$sizeMobile) {
-    main{
+    .main-direct{
         background-color: white;
     }
 }
 
-main {
+.main-direct {
     overflow-y: hidden;
 
     .desktop{
@@ -102,7 +102,10 @@ main {
 
 @media screen and (min-width: reset.$sizeNotebook) {
     
-    main{
+    .main-direct{
+        align-items: center;
+        display: flex;
+        justify-content: center;
         .desktop{
             display: block;
         }
@@ -116,7 +119,7 @@ main {
             background-color: white;
             border: 2px solid #DBDBDB;
             display: block;
-            margin: 23px auto;
+            margin: 23px 0px 0px 0px;
             justify-content: center;
             width: 332px;
 
@@ -126,7 +129,7 @@ main {
                 display: flex;
                 justify-content: space-around;
 
-                h2{
+                .h2{
                     font-size: 1.2rem;
                 }
 
@@ -140,7 +143,7 @@ main {
 
             .stories-feed.direct{
                 @include reset.width-height(494px, 100%);
-                padding: 24px 0;
+                padding-top: 15px;
                 width: 100%;
                 overflow-x: hidden;
     
@@ -163,10 +166,10 @@ main {
                         }
     
                         .stories-img {
-                            @include reset.width-height(65px, 65px);
+                            @include reset.width-height(62px, 62px);
                             
                             img{
-                                max-width: 65px;
+                                max-width: 62px;
                             }
                         }
                     
@@ -181,6 +184,14 @@ main {
                     }
                 }
             }
+        }
+
+        .container-aside{
+            background-color: white;
+            border: 1px solid #DBDBDB;
+            height: 571px;
+            margin: 23px 0px 0px 0px;
+            width: 590px;
         }
     }
 }
