@@ -1,4 +1,4 @@
-import { CaretDown, ChatText, MagnifyingGlass } from "phosphor-react";
+import { CaretDown, ChatText, MagnifyingGlass, PaperPlaneTilt } from "phosphor-react";
 import { storiesInfos } from "../../../components/Main/Carrossel Stories";
 import "./style.scss";
 
@@ -49,7 +49,17 @@ export function Main() {
       </main>
 
       <aside className="container-aside desktop">
-        
+        <div className="aside-infos">
+          <div className="rounded-aside">
+            <PaperPlaneTilt size={64} weight="bold" />
+          </div>
+
+          <h2 className="h2">Your Messages</h2>
+
+          <span>Send private photos and messages to a friend or group.</span>
+
+          <button className="btn">Send Message</button>
+        </div>
       </aside>
     </main>
   );

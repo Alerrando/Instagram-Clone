@@ -187,11 +187,52 @@
         }
 
         .container-aside{
+            align-items: center;
             background-color: white;
             border: 1px solid #DBDBDB;
+            display: flex;
             height: 571px;
+            justify-content: center;
             margin: 23px 0px 0px 0px;
             width: 590px;
+
+            .aside-infos{
+                text-align: center;
+
+                .rounded-aside{
+                    align-items: center;
+                    border-radius: 100px;
+                    border: 1px solid black;
+                    display: flex;
+                    justify-content: center;
+                    height: 110px;
+                    margin: 0 auto;
+                    width: 110px;
+                }
+
+                .h2{
+                    font-weight: 400;
+                    margin: 14px 0;
+                }
+
+                .h2,span{
+                    opacity: 0.70;
+                }
+
+                .btn{
+                    background-color: #0095F6;
+                    border: none;
+                    border-radius: 5px;
+                    color: white;
+                    cursor: pointer;
+                    display: block;
+                    margin: 24px auto;
+                    font-size: 1rem;
+                    padding: 7px 9px;
+                    outline: none;
+                }
+            }
+
         }
     }
 }
