@@ -131,6 +131,7 @@
 
                 .h2{
                     font-size: 1.2rem;
+                    font-weight: 500;
                 }
 
                 .name-account{
@@ -138,6 +139,11 @@
                     display: flex;
                     gap: 6px;
                     justify-content: center;
+
+                }
+                
+                svg{
+                    cursor: pointer;
                 }
             }
 
