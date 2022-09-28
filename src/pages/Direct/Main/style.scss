@@ -106,6 +106,7 @@
         align-items: center;
         display: flex;
         justify-content: center;
+        margin-top: 18px;
         .desktop{
             display: block;
         }
@@ -119,14 +120,15 @@
             background-color: white;
             border: 2px solid #DBDBDB;
             display: block;
-            margin: 23px 0px 0px 0px;
+            height: 516px;
             justify-content: center;
-            width: 332px;
+            width: 300px;
 
             .account-message{
                 align-items: center;
                 border-bottom: 1px solid #DBDBDB;
                 display: flex;
+                height: 52px;
                 justify-content: space-around;
 
                 .h2{
@@ -148,14 +150,14 @@
             }
 
             .stories-feed.direct{
-                @include reset.width-height(494px, 100%);
+                @include reset.width-height(447px, 100%);
                 padding-top: 15px;
                 width: 100%;
                 overflow-x: hidden;
     
                 .stories-container{
                     display: grid;
-                    gap: 20px;
+                    gap: 10px;
                     padding: 0;
                     
                     .stories{
@@ -167,12 +169,12 @@
                         width: 100%;
     
                         .online{
-                            left: 20%;
-                            top: 65%;
+                            left: 19%;
+                            top: 55%;
                         }
     
                         .stories-img {
-                            @include reset.width-height(62px, 62px);
+                            @include reset.width-height(52px, 52px);
                             
                             img{
                                 max-width: 62px;
@@ -197,10 +199,9 @@
             background-color: white;
             border: 1px solid #DBDBDB;
             display: flex;
-            height: 571px;
+            height: 518px;
             justify-content: center;
-            margin: 23px 0px 0px 0px;
-            width: 590px;
+            width: 595px;
 
             .aside-infos{
                 text-align: center;
