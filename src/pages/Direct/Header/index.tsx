@@ -24,7 +24,11 @@ export function Header(){
                             <ArrowLeft size={24} weight="bold"/>
                         </Link>
                         <h2 translate='no'>alerrandob</h2>
-                        <Plus size={32} weight="bold" />
+
+                        <Link to="/direct/new-message">
+                            <Plus size={32} weight="bold" />
+                        </Link>
+                        
                     </header>
                 </div>
 

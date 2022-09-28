@@ -32,35 +32,14 @@
 @media screen and (min-width: reset.$sizeNotebook) {
     .header-princ.direct {
         background-color: white;
-        height: 60px;
+        height: 68px;
         .container-header {
             .img-Instagram.direct {
-                @include reset.width-height(34px, 3333.5px);
                 margin-left: 11px;
-
-                img{
-                    @include reset.width-height(34px, 100px);
-                }
             }
 
             .mobile {
                 display: none;
-            }
-
-            #search-container{
-                height: 34px;
-
-                .search{
-                    @include reset.width-height(30px, 210px);
-
-                    svg{
-                        width: 22;
-                    }
-
-                    input{
-                        font-size: 0.9rem
-                    }
-                }
             }
 
             .desktop {
@@ -71,16 +50,6 @@
                         svg {
                             @include reset.width-height(28px, 28px);
                         }
-                    }
-
-                    a{
-                        svg{
-                            @include reset.width-height(23px, 23px);
-                        }
-                    }
-
-                    svg{
-                        @include reset.width-height(25px, 25px);
                     }
                 }
             }

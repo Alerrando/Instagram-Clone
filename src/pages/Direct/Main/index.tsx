@@ -5,6 +5,7 @@ import {
   PaperPlaneTilt,
 } from "phosphor-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { storiesInfos } from "../../../components/Main/Carrossel Stories";
 import { Modal } from "./Modal";
 import "./style.scss";
@@ -32,7 +33,8 @@ export function Main() {
               </h2>
               <CaretDown size={24} weight="bold" />
             </div>
-            <ChatText size={28} weight="bold" />
+
+              <ChatText size={28} weight="bold" />
           </div>
           <div className="stories-feed direct">
             <div className="stories-container">
