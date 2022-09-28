@@ -1,0 +1,22 @@
+@use '/src/components/reset.scss';
+
+.newMessage-header{
+    @include reset.width-height(70px, 100%);
+    background-color: white;
+
+    .container-header{
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+
+        .title-newMessage{
+            @extend .container-header;
+            justify-content: normal;
+            gap: 20px;
+            margin-left: 20px;
+
+            svg{cursor: pointer;}
+        }
+    }
+}
