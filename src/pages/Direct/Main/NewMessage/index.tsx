@@ -83,8 +83,7 @@ export function NewMessage() {
   function searchPeople(namePeople:string){
     let aux:number = 0;
 
-    add.map(people => {
-        console.log(people)
+    add.forEach(people => {
         if(people.name == namePeople)
             aux = -1;
     })
@@ -94,21 +93,30 @@ export function NewMessage() {
 
   function addNewMessagePeople(namePeople: string, index:number) {
     const verificar = searchPeople(namePeople)
-    console.log(verificar, index);
-
+    
     if(verificar >= 0)
     {
-        const aux = {
-          name: namePeople,
+      const aux = {
+        name: namePeople,
         };
     
         setAdd([...add, aux]);
     }
     else{
-        const arrayAux = [...add];
-        arrayAux.splice(index-1, 1);
-        setAdd(arrayAux);
+      deletePeople(namePeople);
     }
 
+  }
+
+  function deletePeople(namePeople:string){
+    let indexPeople = 0;
+    add.forEach((people, index) => {
+        if(people.name == namePeople)
+          indexPeople = index;
+    })
+    console.log(indexPeople - 1, namePeople,add)
+    const arrayAux = [...add];
+    arrayAux.splice(indexPeople, 1);
+    setAdd(arrayAux);
   }
 }
