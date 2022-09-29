@@ -5,12 +5,15 @@ import { storiesInfos } from "../../../../components/Main/Carrossel Stories";
 import "./style.scss";
 
 export function NewMessage() {
-    const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("");
+  const [add, setAdd] = useState<any[]>([]);
 
-    const procurar = storiesInfos.filter((storie) => Object.values(storie.name)
-    .join("")
-    .toLowerCase()
-    .includes(search.toLowerCase()))
+  const procurar = storiesInfos.filter((storie) =>
+    Object.values(storie.name)
+      .join("")
+      .toLowerCase()
+      .includes(search.toLowerCase())
+  );
 
   return (
     <>
@@ -31,22 +34,44 @@ export function NewMessage() {
       <main>
         <div className="search-new-message">
           <label>Para</label>
-          <input type="text" name="search" id="search" placeholder="Search" onChange={e => setSearch((e.target as HTMLInputElement).value)} />
+          <div className="search-people">
+            <>
+                {add.map((people, index) => (
+                    add[index].name
+                ))}
+
+                <input
+                type="text"
+                name="search"
+                id="search"
+                placeholder="Search"
+                onChange={(e) => setSearch((e.target as HTMLInputElement).value)}
+                />
+            </>
+          </div>
         </div>
 
         <div className="stories-container">
           {procurar.map((storie, index) =>
             procurar[index].name !== "My Story" ? (
-              <div className="stories" key={index}>
-                <div className="online"></div>
-                <div className="stories-img">
-                  <img src={procurar[index].url} alt="" />
+              <div className="infos-storie">
+                <div className="stories" key={index}>
+                  <div className="stories-img">
+                    <img src={procurar[index].url} alt="" />
+                  </div>
+
+                  <p translate="no" className="name-storie">
+                    {procurar[index].name}
+                    <span>Online 14h</span>
+                  </p>
                 </div>
 
-                <p translate="no" className="name-storie">
-                  {procurar[index].name}
-                  <span>Online 14h</span>
-                </p>
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  onClick={() => addNewMessagePeople(procurar[index].name, index)}
+                />
               </div>
             ) : null
           )}
@@ -54,4 +79,36 @@ export function NewMessage() {
       </main>
     </>
   );
+
+  function searchPeople(namePeople:string){
+    let aux:number = 0;
+
+    add.map(people => {
+        console.log(people)
+        if(people.name == namePeople)
+            aux = -1;
+    })
+
+    return aux;
+  }
+
+  function addNewMessagePeople(namePeople: string, index:number) {
+    const verificar = searchPeople(namePeople)
+    console.log(verificar, index);
+
+    if(verificar >= 0)
+    {
+        const aux = {
+          name: namePeople,
+        };
+    
+        setAdd([...add, aux]);
+    }
+    else{
+        const arrayAux = [...add];
+        arrayAux.splice(index-1, 1);
+        setAdd(arrayAux);
+    }
+
+  }
 }

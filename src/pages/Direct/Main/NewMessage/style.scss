@@ -46,58 +46,78 @@ main {
             font-weight: 600;
         }
 
-        input {
-            border: none;
-            font-size: 1rem;
-            outline: none;
+        .search-people{
+            align-items: center;
+            display: flex;
+
+
+            input {
+                border: none;
+                font-size: 1rem;
+                outline: none;
+            }
         }
+
     }
     .stories-container {
         display: grid;
         padding: 20px 26px;
         gap: 5px;
 
-        .stories {
-            cursor: pointer;
+        .infos-storie {
+            align-items: center;
             display: flex;
-            gap: 20px;
-            max-width: none;
-            position: relative;
-            width: 100%;
+            justify-content: space-between;
 
-            .online {
-                @include reset.width-height(11px, 11px);
-                background-color: #78de45;
-                border: 4px solid white;
-                border-radius: 100px;
-                left: 12%;
-                position: absolute;
-                top: 68%;
-                z-index: 100;
-            }
-
-            .stories-img {
-                @include reset.width-height(60px, 60px);
-                align-items: center;
+            .stories {
+                cursor: pointer;
                 display: flex;
-                justify-content: center;
+                gap: 20px;
+                max-width: none;
                 position: relative;
+                width: 100%;
 
-                img {
-                    @include reset.width-height(100%, 100%);
-                    border-radius: 100px;
-                    object-fit: cover;
-                    z-index: 2;
+                .stories-img {
+                    @include reset.width-height(60px, 60px);
+                    align-items: center;
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+
+                    img {
+                        @include reset.width-height(100%, 100%);
+                        border-radius: 100px;
+                        object-fit: cover;
+                        z-index: 2;
+                    }
+                }
+
+                .name-storie {
+                    display: grid;
+                    font-size: 0.8rem;
+                    gap: 6px;
+
+                    span {
+                        opacity: 0.6;
+                    }
                 }
             }
 
-            .name-storie {
-                display: grid;
-                font-size: 0.8rem;
-                gap: 6px;
+            input {
+                -webkit-appearance: none;
+                appearance: none;
+                background-color: white;
+                border: 1px solid #000;
+                border-radius: 50%;
+                cursor: pointer;
+                height: 1.2em;
+                outline: none;
+                transition: all 0.4s;
+                vertical-align: middle;
+                width: 1.2em;
 
-                span {
-                    opacity: 0.6;
+                &:checked{
+                    background-color: rgb(21, 21, 255);
                 }
             }
         }
