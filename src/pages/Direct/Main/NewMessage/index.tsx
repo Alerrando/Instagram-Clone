@@ -1,4 +1,4 @@
-import { ArrowLeft } from "phosphor-react";
+import { ArrowLeft, X } from "phosphor-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { storiesInfos } from "../../../../components/Main/Carrossel Stories";
@@ -8,7 +8,7 @@ export function NewMessage() {
   const [search, setSearch] = useState("");
   const [add, setAdd] = useState<any[]>([]);
 
-  const procurar = storiesInfos.filter((storie) =>
+  const searchFor = storiesInfos.filter((storie) =>
     Object.values(storie.name)
       .join("")
       .toLowerCase()
@@ -24,21 +24,28 @@ export function NewMessage() {
               <ArrowLeft size={32} weight="bold" />
             </Link>
 
-            <h2 className="h2">New Message</h2>
+            <h2 className="h2" translate="no">New Message</h2>
           </div>
 
-          <span>Chat</span>
+          <span translate="no">Chat</span>
         </div>
       </header>
 
       <main>
         <div className="search-new-message">
-          <label>Para</label>
+          <label translate="no">For</label>
           <div className="search-people">
             <>
-                {add.map((people, index) => (
-                    add[index].name
-                ))}
+              {add.length !== 0 ? (
+                <div className="selected-people">
+                  {add.map((people, index) => (
+                    <div className="name-people" onClick={() => deletePeople(add[index].name)}>
+                      <span>{add[index].name}</span> 
+                      <X size={18} weight="bold" />
+                    </div>
+                  ))}
+                </div>
+              ) : null}
 
                 <input
                 type="text"
@@ -52,16 +59,17 @@ export function NewMessage() {
         </div>
 
         <div className="stories-container">
-          {procurar.map((storie, index) =>
-            procurar[index].name !== "My Story" ? (
+          <h2 className="h2">Suggestions</h2>
+          {searchFor.map((storie, index) =>
+            searchFor[index].name !== "My Story" ? (
               <div className="infos-storie">
                 <div className="stories" key={index}>
                   <div className="stories-img">
-                    <img src={procurar[index].url} alt="" />
+                    <img src={searchFor[index].url} alt="" />
                   </div>
 
                   <p translate="no" className="name-storie">
-                    {procurar[index].name}
+                    {searchFor[index].name}
                     <span>Online 14h</span>
                   </p>
                 </div>
@@ -70,7 +78,7 @@ export function NewMessage() {
                   type="checkbox"
                   name=""
                   id=""
-                  onClick={() => addNewMessagePeople(procurar[index].name, index)}
+                  onClick={() => addNewMessagePeople(searchFor[index].name, index)}
                 />
               </div>
             ) : null
@@ -92,9 +100,9 @@ export function NewMessage() {
   }
 
   function addNewMessagePeople(namePeople: string, index:number) {
-    const verificar = searchPeople(namePeople)
+    const check = searchPeople(namePeople)
     
-    if(verificar >= 0)
+    if(check >= 0)
     {
       const aux = {
         name: namePeople,
@@ -114,7 +122,6 @@ export function NewMessage() {
         if(people.name == namePeople)
           indexPeople = index;
     })
-    console.log(indexPeople - 1, namePeople,add)
     const arrayAux = [...add];
     arrayAux.splice(indexPeople, 1);
     setAdd(arrayAux);

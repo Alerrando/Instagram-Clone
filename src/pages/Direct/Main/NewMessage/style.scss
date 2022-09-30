@@ -28,9 +28,10 @@ body {
         }
 
         span {
+            color: #076ea4;
             font-size: 1.2rem;
             font-weight: 600;
-            opacity: 0.7;
+            opacity: 0.9;
         }
     }
 }
@@ -46,24 +47,53 @@ main {
             font-weight: 600;
         }
 
-        .search-people{
+        .search-people {
             align-items: center;
-            display: flex;
+            display: block;
+            overflow-x: auto;
 
+            .selected-people {
+                display: flex;
+                gap: 5px;
+                padding: 8px 0px;
+                overflow-x: auto;
+
+                .name-people{
+                    align-items: center;
+                    background: #1a8bd4;
+                    background: -webkit-linear-gradient(left, #1a8bd4, #4bc1de);
+                    background: -moz-linear-gradient(left, #1a8bd4, #4bc1de);
+                    background: linear-gradient(to right, #1a8bd4, #4bc1de);
+                    border-radius: 60px;
+                    color: white;
+                    cursor: pointer;
+                    display: flex;
+                    font-size: 1rem;
+                    gap: 8px;
+                    justify-content: center;
+                    height: 40px;
+                    padding: 0 15px;
+                    width: auto;
+                }
+            }
 
             input {
                 border: none;
                 font-size: 1rem;
+                margin-top: 1rem;
                 outline: none;
-                width: 100%;
+                width: 90%;
             }
         }
-
     }
     .stories-container {
         display: grid;
         padding: 20px 26px;
         gap: 5px;
+
+        .h2{
+            font-size: 1.2rem;
+        }
 
         .infos-storie {
             align-items: center;
@@ -113,11 +143,11 @@ main {
                 cursor: pointer;
                 height: 1.2em;
                 outline: none;
-                transition: all 0.4s;
+                transition: all 0.4s ease;
                 vertical-align: middle;
                 width: 1.2em;
 
-                &:checked{
+                &:hover {
                     background-color: rgb(21, 21, 255);
                 }
             }
