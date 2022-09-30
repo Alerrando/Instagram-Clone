@@ -4,18 +4,18 @@ body {
     background-color: white;
 }
 
-.newMessage-header {
+.header-modal-header {
     @include reset.width-height(70px, 100%);
     align-items: center;
     display: flex;
     justify-content: space-between;
 
     .container-header {
-        @extend .newMessage-header;
+        @extend .header-modal-header;
         width: 90%;
 
         .title-newMessage {
-            @extend .newMessage-header;
+            @extend .header-modal-header;
             justify-content: normal;
             gap: 20px;
             margin-left: 20px;

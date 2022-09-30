@@ -17,7 +17,7 @@ export function NewMessage() {
 
   return (
     <>
-      <header className="newMessage-header">
+      <header className="header-modal-header">
         <div className="container-header">
           <div className="title-newMessage">
             <Link to="/direct">

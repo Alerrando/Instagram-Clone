@@ -1,2 +1,20 @@
 @use '/src//components/reset.scss';
 
+.modal{
+    @include reset.width-height(100vh, 100vw);
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    left: 0px;
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+
+    .modal-container{
+        @include reset.width-height(420px, 420px);
+        background-color: white;
+        border-radius: 10px;
+    }
+}

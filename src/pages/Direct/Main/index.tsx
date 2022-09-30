@@ -10,7 +10,8 @@ import { storiesInfos } from "../../../components/Main/Carrossel Stories";
 import { Modal } from "./Modal";
 import "./style.scss";
 
-const linkAPI = "https://api.unsplash.com/photos/random/?client_id=DE3PMxauanAnmkqPdXj8KMCyBOchgHxf4G140FaUq5E";
+const linkAPI =
+  "https://api.unsplash.com/photos/random/?client_id=DE3PMxauanAnmkqPdXj8KMCyBOchgHxf4G140FaUq5E";
 
 export function Main() {
   const [modalMessage, setModalMessage] = useState(false);
@@ -24,42 +25,42 @@ export function Main() {
         </div>
       </header>
       <main className="container-message">
-        <div>
-          <div className="account-message desktop">
-            <div></div>
-            <div className="name-account">
-              <h2 translate="no" className="h2">
-                alerrandob
-              </h2>
-              <CaretDown size={24} weight="bold" />
-            </div>
+        <>
+          <div>
+            <div className="account-message desktop">
+              <div></div>
+              <div className="name-account">
+                <h2 translate="no" className="h2">
+                  alerrandob
+                </h2>
+                <CaretDown size={24} weight="bold" />
+              </div>
 
-              <ChatText size={28} weight="bold" />
-          </div>
-          <div className="stories-feed direct">
-            <div className="stories-container">
-              {storiesInfos.map((storie, index) =>
-                index !== 0 ? (
-                  <div className="stories" key={index}>
-                    <div className="online"></div>
-                    <div className="stories-img">
-                      <img src={storiesInfos[index].url} alt="" />
+              <ChatText onClick={() => setModalMessage(true)} size={28} weight="bold" />
+            </div>
+            <div className="stories-feed direct">
+              <div className="stories-container">
+                {storiesInfos.map((storie, index) =>
+                  index !== 0 ? (
+                    <div className="stories" key={index}>
+                      <div className="online"></div>
+                      <div className="stories-img">
+                        <img src={storiesInfos[index].url} alt="" />
+                      </div>
+
+                      <p translate="no" className="name-storie">
+                        {storiesInfos[index].name}
+                        <span>Online 14h</span>
+                      </p>
                     </div>
-
-                    <p translate="no" className="name-storie">
-                      {storiesInfos[index].name}
-                      <span>Online 14h</span>
-                    </p>
-                  </div>
-                ) : null
-              )}
+                  ) : null
+                )}
+              </div>
             </div>
           </div>
-        </div>
 
-        {modalMessage == true ? (
-          <Modal />
-        ) : null}
+          {modalMessage == true ? <Modal setModalMessage={setModalMessage} /> : null}
+        </>
       </main>
 
       <aside className="container-aside desktop">
