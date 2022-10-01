@@ -106,7 +106,7 @@
     .main-direct{
         align-items: center;
         display: flex;
-        height: auto;
+        height: calc(100vh - 5.3rem);
         justify-content: center;
         margin-top: 15px;
         .desktop{
@@ -122,7 +122,7 @@
             background-color: white;
             border: 2px solid #DBDBDB;
             display: block;
-            height: 516px;
+            height: 96%;
             justify-content: center;
             width: 300px;
 
@@ -152,7 +152,7 @@
             }
 
             .stories-feed.direct{
-                @include reset.width-height(447px, 100%);
+                @include reset.width-height(100%, 100%);
                 padding-top: 15px;
                 width: 100%;
                 overflow-x: hidden;
@@ -201,7 +201,7 @@
             background-color: white;
             border: 1px solid #DBDBDB;
             display: flex;
-            height: 518px;
+            height: 96%;
             justify-content: center;
             width: 595px;
 

@@ -5,7 +5,6 @@ import {
   PaperPlaneTilt,
 } from "phosphor-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { storiesInfos } from "../../../components/Main/Carrossel Stories";
 import { Modal } from "./Modal";
 import "./style.scss";

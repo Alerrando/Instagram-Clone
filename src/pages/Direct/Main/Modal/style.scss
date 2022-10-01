@@ -21,8 +21,8 @@
             height: 50px;
             .container-header {
                 @include reset.width-height(40px, 100%);
-                border-bottom: 1px solid #ededed;
-                justify-content: space-around;
+                justify-content: space-between;
+                padding: 0 20px;
 
                 svg {
                     cursor: pointer;
@@ -31,6 +31,22 @@
                 .h2,
                 span {
                     font-size: 0.95rem;
+                }
+            }
+
+        }
+        main{
+            .search-new-message{
+                align-items: center;
+                border-bottom: 1px solid #ededed;
+                border-top: 1px solid #ededed;
+                display: flex;
+                margin: 0;
+                padding: 20px;
+
+                input{
+                    display: block;
+                    margin: 0;
                 }
             }
         }

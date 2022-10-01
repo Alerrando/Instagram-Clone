@@ -24,7 +24,9 @@ export function NewMessage() {
               <ArrowLeft size={32} weight="bold" />
             </Link>
 
-            <h2 className="h2" translate="no">New Message</h2>
+            <h2 className="h2" translate="no">
+              New Message
+            </h2>
           </div>
 
           <span translate="no">Chat</span>
@@ -33,27 +35,32 @@ export function NewMessage() {
 
       <main>
         <div className="search-new-message">
-          <label translate="no">For</label>
+          <label translate="no">For:</label>
           <div className="search-people">
             <>
               {add.length !== 0 ? (
                 <div className="selected-people">
                   {add.map((people, index) => (
-                    <div className="name-people" onClick={() => deletePeople(add[index].name)}>
-                      <span>{add[index].name}</span> 
+                    <div
+                      className="name-people"
+                      onClick={() => deletePeople(add[index].name)}
+                    >
+                      <span>{add[index].name}</span>
                       <X size={18} weight="bold" />
                     </div>
                   ))}
                 </div>
               ) : null}
 
-                <input
+              <input
                 type="text"
                 name="search"
                 id="search"
                 placeholder="Search"
-                onChange={(e) => setSearch((e.target as HTMLInputElement).value)}
-                />
+                onChange={(e) =>
+                  setSearch((e.target as HTMLInputElement).value)
+                }
+              />
             </>
           </div>
         </div>
@@ -78,7 +85,9 @@ export function NewMessage() {
                   type="checkbox"
                   name=""
                   id=""
-                  onClick={() => addNewMessagePeople(searchFor[index].name, index)}
+                  onClick={() =>
+                    addNewMessagePeople(searchFor[index].name, index)
+                  }
                 />
               </div>
             ) : null
@@ -88,40 +97,35 @@ export function NewMessage() {
     </>
   );
 
-  function searchPeople(namePeople:string){
-    let aux:number = 0;
+  function searchPeople(namePeople: string) {
+    let aux: number = 0;
 
-    add.forEach(people => {
-        if(people.name == namePeople)
-            aux = -1;
-    })
+    add.forEach((people) => {
+      if (people.name == namePeople) aux = -1;
+    });
 
     return aux;
   }
 
-  function addNewMessagePeople(namePeople: string, index:number) {
-    const check = searchPeople(namePeople)
-    
-    if(check >= 0)
-    {
+  function addNewMessagePeople(namePeople: string, index: number) {
+    const check = searchPeople(namePeople);
+
+    if (check >= 0) {
       const aux = {
         name: namePeople,
-        };
-    
-        setAdd([...add, aux]);
-    }
-    else{
+      };
+
+      setAdd([...add, aux]);
+    } else {
       deletePeople(namePeople);
     }
-
   }
 
-  function deletePeople(namePeople:string){
+  function deletePeople(namePeople: string) {
     let indexPeople = 0;
     add.forEach((people, index) => {
-        if(people.name == namePeople)
-          indexPeople = index;
-    })
+      if (people.name == namePeople) indexPeople = index;
+    });
     const arrayAux = [...add];
     arrayAux.splice(indexPeople, 1);
     setAdd(arrayAux);
