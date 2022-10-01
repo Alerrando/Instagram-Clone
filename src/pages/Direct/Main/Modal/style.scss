@@ -37,17 +37,33 @@
         }
         main{
             .search-new-message{
-                align-items: center;
+                align-items: start;
                 border-bottom: 1px solid #ededed;
                 border-top: 1px solid #ededed;
                 display: flex;
                 margin: 0;
                 padding: 20px;
 
-                input{
-                    display: block;
-                    margin: 0;
+                .search-people{
+                    display: flex;
+                    flex-wrap: wrap;
+                    overflow-x: hidden;
+
+                    input{
+                        margin: 0;
+                    }
+
+                    .selected-people{
+                        display: contents;
+                        overflow-x: hidden;
+
+                        .name-people{
+                            margin-right: 7px;
+                            margin-bottom: 7px;
+                        }
+                    }
                 }
+
             }
         }
     }
