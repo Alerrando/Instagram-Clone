@@ -1,6 +1,6 @@
-@use '/src//components/reset.scss';
+@use "/src//components/reset.scss";
 
-.modal{
+.modal {
     @include reset.width-height(100vh, 100vw);
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
@@ -12,9 +12,27 @@
     top: 0px;
     z-index: 100;
 
-    .modal-container{
+    .modal-container {
         @include reset.width-height(420px, 420px);
         background-color: white;
         border-radius: 10px;
+
+        .header-modal-header {
+            height: 50px;
+            .container-header {
+                @include reset.width-height(40px, 100%);
+                border-bottom: 1px solid #ededed;
+                justify-content: space-around;
+
+                svg {
+                    cursor: pointer;
+                }
+
+                .h2,
+                span {
+                    font-size: 0.95rem;
+                }
+            }
+        }
     }
 }
