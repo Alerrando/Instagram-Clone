@@ -1,7 +1,7 @@
 @use "/src/components/reset.scss";
 
-body {
-    background-color: white;
+.header-modal-header, main{
+    background-color: white
 }
 
 .header-modal-header {
@@ -154,3 +154,4 @@ main {
         }
     }
 }
+
