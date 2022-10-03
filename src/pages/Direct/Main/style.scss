@@ -105,6 +105,7 @@
     
     .main-direct{
         align-items: center;
+        background-color: whitesmoke;
         display: flex;
         height: calc(100vh - 5.3rem);
         justify-content: center;
@@ -122,8 +123,9 @@
             background-color: white;
             border: 2px solid #DBDBDB;
             display: block;
-            height: 96%;
+            height: 97%;
             justify-content: center;
+            overflow-y: auto;
             width: 300px;
 
             .account-message{
@@ -201,7 +203,7 @@
             background-color: white;
             border: 1px solid #DBDBDB;
             display: flex;
-            height: 96%;
+            height: 97%;
             justify-content: center;
             width: 595px;
 
