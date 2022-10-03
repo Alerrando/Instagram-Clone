@@ -13,9 +13,11 @@
     z-index: 100;
 
     .modal-container {
-        @include reset.width-height(420px, 420px);
+        @include reset.width-height(75%, 420px);
         background-color: white;
         border-radius: 10px;
+        display: flex;
+        flex-direction: column;
 
         .header-modal-header {
             height: 50px;
@@ -33,10 +35,15 @@
                     font-size: 0.95rem;
                 }
             }
-
         }
-        main{
-            .search-new-message{
+        main {
+            display: flex;
+            flex: 1 1 auto;
+            flex-direction: column;
+            height: 90%;
+            overflow: hidden;
+
+            .search-new-message {
                 align-items: start;
                 border-bottom: 1px solid #ededed;
                 border-top: 1px solid #ededed;
@@ -44,26 +51,48 @@
                 margin: 0;
                 padding: 20px;
 
-                .search-people{
+                .search-people {
                     display: flex;
                     flex-wrap: wrap;
                     overflow-x: hidden;
 
-                    input{
+                    input {
                         margin: 0;
                     }
 
-                    .selected-people{
+                    .selected-people {
                         display: contents;
                         overflow-x: hidden;
 
-                        .name-people{
+                        .name-people {
                             margin-right: 7px;
                             margin-bottom: 7px;
                         }
                     }
                 }
+            }
 
+            .stories-container {
+                gap: 0;
+                height: 420px;
+                padding: 0px 10px 0px 26px;
+                overflow-y: auto;
+
+                .h2 {
+                    font-size: 14px;
+                }
+
+                .stories {
+                    align-items: center;
+                    display: flex;
+                    .stories-img {
+                        @include reset.width-height(52px, 52px);
+                    }
+
+                    .name-storie {
+                        font-size: 0.88rem;
+                    }
+                }
             }
         }
     }

@@ -71,34 +71,35 @@ export function Modal(props: ModalProps) {
             </div>
           </div>
 
-          <div className="stories-container">
-            <h2 className="h2">Suggestions</h2>
-            {searchFor.map((storie, index) =>
-              searchFor[index].name !== "My Story" ? (
-                <div className="infos-storie">
-                  <div className="stories" key={index}>
-                    <div className="stories-img">
-                      <img src={searchFor[index].url} alt="" />
+            <div className="stories-container">
+              <h2 className="h2">Suggestions</h2>
+              {searchFor.map((storie, index) =>
+                searchFor[index].name !== "My Story" ? (
+                  <div className="infos-storie">
+                    <div className="stories" key={index}>
+                      <div className="stories-img">
+                        <img src={searchFor[index].url} alt="" />
+                      </div>
+
+                      <p translate="no" className="name-storie">
+                        {searchFor[index].name}
+                        <span>Online 14h</span>
+                      </p>
                     </div>
 
-                    <p translate="no" className="name-storie">
-                      {searchFor[index].name}
-                      <span>Online 14h</span>
-                    </p>
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      onClick={() =>
+                        addNewMessagePeople(searchFor[index].name, index)
+                      }
+                    />
                   </div>
+                ) : null
+              )}
+            </div>
 
-                  <input
-                    type="checkbox"
-                    name=""
-                    id=""
-                    onClick={() =>
-                      addNewMessagePeople(searchFor[index].name, index)
-                    }
-                  />
-                </div>
-              ) : null
-            )}
-          </div>
         </main>
       </div>
     </div>
